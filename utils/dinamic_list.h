@@ -136,7 +136,7 @@ int dinamic_list_expand(dinamic_list *list) {
     // viene aggiornato p_length a res
     * p_length = res;
     
-    (* list).list = realloc((* list).list, sizeof(p_length)*res);   // riallocazione della lista
+    (* list).list = (void **) realloc((* list).list, sizeof(p_length)*res);   // riallocazione della lista
 
     return 0;
 }
@@ -153,7 +153,7 @@ int dinamic_list_reduce(dinamic_list *list) {
     // aggiorno la lunghezza della dinamic_list
     *p_length = res;
     // rialloco la lista
-    (* list).list = realloc((* list).list, sizeof(p_length)*res);
+    (* list).list = (void **) realloc((* list).list, sizeof(p_length)*res);
 
     return 0;
 }
@@ -175,12 +175,12 @@ int check_long_overflow(long* result, long a, long b)
 Funzione che ritorna una nuova dinamic_list inizializzata e allocata in memoria.
 */
 dinamic_list *dinamic_list_new() {
-    dinamic_list *list = malloc(sizeof(dinamic_list));  // alloco in memoria spazio per la dinamic_list
+    dinamic_list *list = (dinamic_list *) malloc(sizeof(dinamic_list));  // alloco in memoria spazio per la dinamic_list
     // inizializza i valori della dinamic list e ritorna il puntatore alla struttura
     (* list).last = -1;
     (* list).allocated_size = MIN_SIZE;
-    (* list).list = calloc(MIN_SIZE, sizeof(list));
-    list->mutex = malloc(sizeof(pthread_mutex_t));
+    (* list).list = (void **) calloc(MIN_SIZE, sizeof(list));
+    list->mutex = (pthread_mutex_t *) malloc(sizeof(pthread_mutex_t));
     pthread_mutex_init(list->mutex, NULL);
     return list;
 }
@@ -212,6 +212,11 @@ void *dinamic_list_remove_element(dinamic_list *list, void *el) {
             return ret;
         }
     }
+    // controllo per vedere se l'ultimo elemento si trova prima della metà della lunghezza
+    // attualmente allocata per la dinamic_list. Se infatti è così la lista viene ridotta
+    if (((list->last)) < (long)((* list).allocated_size / 2)) {
+        dinamic_list_reduce(list);
+    }
     //unlock del mutex
     pthread_mutex_unlock(list->mutex);
     return ret;
@@ -226,7 +231,7 @@ element dinamic_list_pop(dinamic_list *list, long i) {
     pthread_mutex_lock(list->mutex);
     int last = (* list).last;
     // allocazione in memoria della struttura di tipo element
-    element *ret = malloc(sizeof(element));
+    element *ret = (element *) malloc(sizeof(element));
     // check sull'indice dell'elemento da eliminare
     if (i > last || i < 0) {
         perror("Index out of range");
@@ -246,10 +251,55 @@ element dinamic_list_pop(dinamic_list *list, long i) {
 
         list->last--;
     }
+    // controllo per vedere se l'ultimo elemento si trova prima della metà della lunghezza
+    // attualmente allocata per la dinamic_list. Se infatti è così la lista viene ridotta
+    if (((last)) < (long)((* list).allocated_size / 2)) {
+        dinamic_list_reduce(list);
+    }
     // unlock del mutex e return
     pthread_mutex_unlock(list->mutex);
     return *ret;
 }
+
+/*
+    Funzione che elimina l'i-esimo elemento swappandolo con l'ultimo e poi poppandolo.
+    Non mantiene l'ordine all'interno della lista.
+*/
+element dinamic_list_fast_pop(dinamic_list *list, long i) {
+    pthread_mutex_lock(list->mutex);
+    int last = (* list).last;
+    // allocazione in memoria della struttura di tipo element
+    element *ret = (element*) malloc(sizeof(element));
+    // check sull'indice dell'elemento da eliminare
+    if (i > last || i < 0) {
+        perror("Index out of range");
+        ret->value = 0;
+        ret->error = 1;
+    }
+    else {  // se l'indice è corretto, salvo il puntatore all'i-esimo elemento, setto error a 0,
+            // scorro di una posizione a sinistra tutti gli elementi che si trovano dopo l'i-esimo elemento
+        ret->value = (* list).list[i];
+        ret->error = 0;
+
+        // prendo l'ultimo elemento e lo metto al posto dell'i-esimo
+        list->list[i] = list->list[last];
+        
+        // setto l'ultimo elemento a 0 e aggiorno last.
+        list->list[last] = 0;
+
+        list->last--;
+
+    }
+    // controllo per vedere se l'ultimo elemento si trova prima della metà della lunghezza
+    // attualmente allocata per la dinamic_list. Se infatti è così la lista viene ridotta
+    if (((last)) < (long)((* list).allocated_size / 2)) {
+        dinamic_list_reduce(list);
+    }
+    // unlock del mutex e return
+    pthread_mutex_unlock(list->mutex);
+    return *ret;
+}
+
 /*
 Funzione che inseriscre l'elemento elemento nella posizione index della lista.
 ritorna 1 in caso di errore e 0 in caso di successo.

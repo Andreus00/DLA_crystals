@@ -1,9 +1,15 @@
 #include <math.h>
 
 #define CHUNK_SIZE 16
+
 // size of voxels in chunks
 struct coords {
     int x, y, z;
+};
+
+struct cell_info {
+    struct coords coord;
+    int particles;
 };
 
 // a chunk of the voxel
@@ -30,3 +36,10 @@ int getValue(struct voxel* v, struct coords c, int* out);
 int setValue(struct voxel* v, struct coords c, int value);
 
 struct coords getSize(struct voxel* v);
+
+
+
+//////////////////////////////
+// random generator
+
+float random_float(int *rng);

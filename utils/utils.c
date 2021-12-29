@@ -54,11 +54,61 @@ int setValue(struct voxel* v, struct coords c, int value) {
     return 0;
 }
 
+// set the value of a cell
+int incrementValue(struct voxel* v, struct coords c) {
+    // recupero il blocco
+    int x_block = c.x / CHUNK_SIZE;
+    int y_block = c.y / CHUNK_SIZE;
+    int z_block = c.z / CHUNK_SIZE;
+    struct coords coord = {x_block, y_block, z_block};
+    struct  chunk* b = getChunk(v, coord);
+    if (b == NULL) {
+        return -1;
+    }
+
+    int x = c.x % CHUNK_SIZE;
+    int y = c.y % CHUNK_SIZE;
+    int z = c.z % CHUNK_SIZE;
+
+    b->blocks[z][y][x]++;
+    return 0;
+}
+
+// set the value of a cell
+int decrementValue(struct voxel* v, struct coords c) {
+    // recupero il blocco
+    int x_block = c.x / CHUNK_SIZE;
+    int y_block = c.y / CHUNK_SIZE;
+    int z_block = c.z / CHUNK_SIZE;
+    struct coords coord = {x_block, y_block, z_block};
+    struct  chunk* b = getChunk(v, coord);
+    if (b == NULL) {
+        return -1;
+    }
+
+    int x = c.x % CHUNK_SIZE;
+    int y = c.y % CHUNK_SIZE;
+    int z = c.z % CHUNK_SIZE;
+
+    b->blocks[z][y][x]--;
+    return 0;
+}
+
+
 struct coords getSize(struct voxel* v) {
-    struct coords ret = {0,0,0};
+    struct coords ret;
     ret.x = v->c.x * CHUNK_SIZE;
     ret.y = v->c.y * CHUNK_SIZE;
     ret.z = v->c.z * CHUNK_SIZE;
     return ret;
+}
+
+////////////////////////
+// pseudo random function
+float random_float(int* rng) {
+    int n  = (*rng << 13U) ^ *rng;
+    (*rng)++;
+    n = n * (n * n * 15731U + 789221U) + 1376312589U;
+    return (float)((n & 0x7fffffffU)/((float)(0x7fffffff)));
 }
 
