@@ -1,0 +1,279 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						8
+					],
+					"jsonFile" : "directory-.-RelWithDebInfo-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-exts-RelWithDebInfo-daef10d323c7d4061440.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts"
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-exts.glfw-RelWithDebInfo-aafee5935b2db495b8a1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glfw"
+				},
+				{
+					"build" : "exts/glfw/src",
+					"jsonFile" : "directory-exts.glfw.src-RelWithDebInfo-70e35575444a1a4e495f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "libs",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"jsonFile" : "directory-libs-RelWithDebInfo-ec580da4e47c3b0e73da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs"
+				},
+				{
+					"build" : "libs/yocto",
+					"jsonFile" : "directory-libs.yocto-RelWithDebInfo-5d1b00fab86079fa60d6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "libs/yocto_model",
+					"jsonFile" : "directory-libs.yocto_model-RelWithDebInfo-3ddf3ae6daef65666968.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_model",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "libs/yocto_gui",
+					"jsonFile" : "directory-libs.yocto_gui-RelWithDebInfo-39bbc9eb6a92f5a9e47c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_gui",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "apps",
+					"childIndexes" : 
+					[
+						9,
+						10
+					],
+					"jsonFile" : "directory-apps-RelWithDebInfo-76fddd1453400e648719.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps"
+				},
+				{
+					"build" : "apps/ymodel",
+					"jsonFile" : "directory-apps.ymodel-RelWithDebInfo-cb232c0b28656d1865af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ymodel",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "apps/yscene",
+					"jsonFile" : "directory-apps.yscene-RelWithDebInfo-41bebe9c80bef525745a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yscene",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					],
+					"name" : "yocto_model",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-RelWithDebInfo-41235a637fc82a87cbe2.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ymodel::@50098ba186231a576bb2",
+					"jsonFile" : "target-ymodel-RelWithDebInfo-dcff43d6ab03d5a1087d.json",
+					"name" : "ymodel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "yocto::@e229a39159fb9a4cdeaa",
+					"jsonFile" : "target-yocto-RelWithDebInfo-faffcd2b781b5c8e6e9c.json",
+					"name" : "yocto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "yocto_gui::@e5da5306e8018ef5ac42",
+					"jsonFile" : "target-yocto_gui-RelWithDebInfo-2bf1504827a198075b3e.json",
+					"name" : "yocto_gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "yocto_model::@188694e718273ad0b5b9",
+					"jsonFile" : "target-yocto_model-RelWithDebInfo-d23e9525092f3b15d0a9.json",
+					"name" : "yocto_model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "yscene::@0f2748806d6542489f2d",
+					"jsonFile" : "target-yscene-RelWithDebInfo-3a6903cd50729c2a9ace.json",
+					"name" : "yscene",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+		"source" : "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

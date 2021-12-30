@@ -1,0 +1,100 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/terminal/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6ec83 && [1/2] Building C object CMakeFiles/cmTC_6ec83.dir/src.c.o
+[2/2] Linking C executable cmTC_6ec83
+FAILED: cmTC_6ec83 
+: && /usr/bin/cc  -rdynamic CMakeFiles/cmTC_6ec83.dir/src.c.o -o cmTC_6ec83   && :
+/usr/bin/ld: CMakeFiles/cmTC_6ec83.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/terminal/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_70ff7 && [1/2] Building C object CMakeFiles/cmTC_70ff7.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_70ff7
+FAILED: cmTC_70ff7 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_70ff7.dir/CheckFunctionExists.c.o -o cmTC_70ff7  -lpthreads && :
+/usr/bin/ld: impossibile trovare -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_f5055 && [1/2] Building C object CMakeFiles/cmTC_f5055.dir/src.c.o
+[2/2] Linking C executable cmTC_f5055
+FAILED: cmTC_f5055 
+: && /usr/bin/cc  -rdynamic CMakeFiles/cmTC_f5055.dir/src.c.o -o cmTC_f5055   && :
+/usr/bin/ld: CMakeFiles/cmTC_f5055.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_d36f1 && [1/2] Building C object CMakeFiles/cmTC_d36f1.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_d36f1
+FAILED: cmTC_d36f1 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d36f1.dir/CheckFunctionExists.c.o -o cmTC_d36f1  -lpthreads && :
+/usr/bin/ld: impossibile trovare -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

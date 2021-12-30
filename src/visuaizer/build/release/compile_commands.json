@@ -1,0 +1,217 @@
+[
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/context.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/context.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/context.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/init.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/init.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/init.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/input.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/input.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/input.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/monitor.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/monitor.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/monitor.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/vulkan.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/vulkan.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/window.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/window.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/window.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_init.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_init.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_monitor.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_monitor.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_window.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/x11_window.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/xkb_unicode.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/posix_time.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/posix_time.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/posix_thread.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/posix_thread.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/glx_context.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/glx_context.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/egl_context.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/egl_context.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement -o exts/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/osmesa_context.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/osmesa_context.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -D_GLFW_USE_CONFIG_H -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release/exts/glfw/src -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -o exts/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/linux_joystick.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/src/linux_joystick.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_modelio.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_modelio.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_modelio.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_bvh.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_bvh.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_bvh.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_shape.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_shape.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_shape.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_mesh.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_mesh.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_mesh.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_image.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_image.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_image.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_scene.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_scene.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_scene.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_trace.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_trace.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_trace.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_sceneio.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_sceneio.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_sceneio.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/yocto_cli.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_cli.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/yocto_cli.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/ext/stb_image.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext/stb_image.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext/stb_image.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto/CMakeFiles/yocto.dir/ext/tinyexr.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext/tinyexr.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto/ext/tinyexr.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_model/CMakeFiles/yocto_model.dir/yocto_model.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/yocto_model.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/yocto_model.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_model/CMakeFiles/yocto_model.dir/ext/perlin-noise/noise1234.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/ext/perlin-noise/noise1234.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_model/ext/perlin-noise/noise1234.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_opengl.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_opengl.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_opengl.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_shade.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_shade.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_shade.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_imgui.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_imgui.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_imgui.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_glview.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_glview.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/yocto_glview.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_demo.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_demo.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_draw.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_draw.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_widgets.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_widgets.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_tables.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_tables.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_glfw.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_impl_glfw.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_opengl3.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/cc -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/. -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/./ext -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -o libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/glad/glad.c.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/glad/glad.c",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs/yocto_gui/ext/glad/glad.c"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -O2 -g -DNDEBUG -std=gnu++17 -o apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/apps/ymodel/ymodel.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/apps/ymodel/ymodel.cpp"
+},
+{
+  "directory": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/build/release",
+  "command": "/usr/bin/c++ -DYOCTO_OPENGL -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/libs -I/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/exts/glfw/include -O2 -g -DNDEBUG -std=gnu++17 -o apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o -c /home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/apps/yscene/yscene.cpp",
+  "file": "/home/andrea/Scrivania/homework_cg/HW_3/03_modeling_out/procedurals_algorithms/out/apps/yscene/yscene.cpp"
+}
+]
