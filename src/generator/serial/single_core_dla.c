@@ -2,7 +2,7 @@
 
 #include "../../../utils/utils.c"
 #include "../../../utils/dinamic_list.h"
-#define PART_NUM 100
+#define PART_NUM 1000
 
 struct coords *get_random_position(struct coords voxel_size, int* rng) {
     struct coords *ret = (struct coords *) malloc(sizeof(struct coords));
@@ -32,37 +32,39 @@ struct coords *get_random_position(struct coords voxel_size, int* rng) {
     return ret;
     
 }
-struct coords move_particle(struct coords *c1,int* rng, struct coords voxel_size){
+void move_particle(struct coords *c1, struct coords *out, int* rng, struct coords voxel_size){
 
-    int dir = (int) random_float(rng)*6;
-    struct coords c = {c1->x, c1->y, c1->z};
+    int dir = (int) (random_float(rng)*6);
+    out->x = c1->x;
+    out->y = c1->y;
+    out->z = c1->z;
     switch (dir){
         case 0:
-            if(c.x < voxel_size.x - 1)
-                c.x++;
+            if(out->x < voxel_size.x - 1)
+                out->x++;
             break;
         case 1:
-            if(c.x > 0)
-                c.x--;
+            if(out->x > 0)
+                out->x--;
             break;
         case 2:
-            if(c.y < voxel_size.y - 1)
-                c.y++;
+            if(out->y < voxel_size.y - 1)
+                out->y++;
             break;
         case 3:
-            if(c.y > 0)
-                c.y--;
+            if(out->y > 0)
+                out->y--;
             break;
         case 4:
-            if(c.z < voxel_size.z - 1)
-                c.z++;
+            if(out->z < voxel_size.z - 1)
+                out->z++;
             break;
         default:
-            if(c.z > 0)
-                c.z--;
+            if(out->z > 0)
+                out->z--;
             break;
     };
-    return c;
+    return;
 }
 
 void init_particles(dinamic_list *list, int num, int* rng, struct voxel *v) {
@@ -71,9 +73,8 @@ void init_particles(dinamic_list *list, int num, int* rng, struct voxel *v) {
     }
 }
 
-int main(int argc, char const *argv[])
-{
-    // inizializzo l'rng
+struct voxel single_core_dla() {
+// inizializzo l'rng
     
     int rng = 69420;
     
@@ -86,7 +87,7 @@ int main(int argc, char const *argv[])
 
     // inizializzazione del cristallo iniziale
 
-    struct coords initial_crystal = {5*16, 5*16, 5*16};
+    struct coords initial_crystal = {5 * 16, 5 * 16, 5 * 16};
     setValue(&space, initial_crystal, -1);
 
     // inizializzazione delle particelle
@@ -99,32 +100,33 @@ int main(int argc, char const *argv[])
     
     init_particles(particle_list, PART_NUM, &rng, &space);
 
-    while(particle_list->last != 0) {
+    while(particle_list->last > 0) {
         //      muove le particelle
         // per ogni particella
         for (int i = particle_list->last; i >= 0; i--){
             // valore presente in una cella del voxel
             int cell_value;
+            struct coords *old_position = (struct coords *)particle_list->list[i];
             // controlla se la particella che si vuole muovere è stata cristallizzata
-            getValue(&space,*((struct coords *)particle_list->list[i]), &cell_value);
+            getValue(&space,*old_position, &cell_value);
             // particella  non cristallizzata
             if(cell_value != -1){
                 // calcolo nuova posizione della particella
-                struct coords new_position = move_particle(particle_list->list[i], &rng, getSize(&space));
+                struct coords new_position;
+                move_particle(old_position, &new_position, &rng, getSize(&space));
                 // controllo se la particella si sta spostando verso un cristallo
                 getValue(&space, new_position, &cell_value);
                 //particella da cristallizzare
                 if(cell_value ==-1){
                     // aggiunge alla lista di particelle da cristallizzare
-                    dinamic_list_add(freezed, particle_list->list[i]);
+                    dinamic_list_add(freezed, old_position);
                     // elimina la particella dalla lista di particelle attive
                     dinamic_list_fast_pop(particle_list, i);
-                    
                 }
                 // si muove verso uno spazio vuoto
                 else{
                     // aggiorna la posizione della particella con la nuova posizione
-                    *((struct coords *)particle_list->list[i]) = new_position;
+                    *old_position = new_position;
                 }
             }
             // particella cristallizzata
@@ -144,8 +146,16 @@ int main(int argc, char const *argv[])
             }
             // setto il valore della cella a -1
             setValue(&space, *((struct coords *) e.value), -1);
+            printf("Crystalized: {%d, %d, %d}\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z);
             free(e.value);
         }
     }
+    return space;
+}
+
+
+int main(int argc, char const *argv[])
+{
+    single_core_dla();
     return 0;
 }

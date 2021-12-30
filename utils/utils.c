@@ -2,7 +2,7 @@
 #include <malloc.h>
 // initialize a voxel
 void init_voxel(struct voxel* v, struct coords c) {
-    v->chunks = (struct chunk*) calloc(c.x * c.y * c.z, sizeof(struct chunk));
+    v->chunks = (struct chunk *) calloc(c.x * c.y * c.z, sizeof(struct chunk));
     v->c.x = c.x;
     v->c.y = c.y;
     v->c.z = c.z;
