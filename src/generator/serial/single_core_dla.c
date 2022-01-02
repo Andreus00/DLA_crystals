@@ -40,20 +40,26 @@ void move_particle(struct coords *c1, struct coords *out, int* rng, struct coord
     out->z = c1->z;
     switch (dir){
         case 0:
-            if(out->x < voxel_size.x - 1)
+            if(out->x < voxel_size.x - 1 && out->y < voxel_size.y && out->z < voxel_size.z){
                 out->x++;
+                out->y++;
+                out->z++;
+            }
             break;
         case 1:
-            if(out->x > 0)
-                out->x--;
+            if(out->x < voxel_size.x - 1 ){
+                out->x++;
+            }
             break;
         case 2:
-            if(out->y < voxel_size.y - 1)
+            if(out->y < voxel_size.y){
                 out->y++;
+            }
             break;
         case 3:
-            if(out->y > 0)
-                out->y--;
+            if(out->z < voxel_size.z){
+                out->z++; // TODO
+            }
             break;
         case 4:
             if(out->z < voxel_size.z - 1)
@@ -74,34 +80,7 @@ void init_particles(dinamic_list *list, int num, int* rng, struct voxel *v) {
 }
 
 void single_core_dla(struct voxel *space, dinamic_list *particle_list, dinamic_list *freezed, int *rng) {
-// inizializzo l'rng
-    
-    // int rng = 69420;
-    
-    // inizializzazione del volxel
-
-    // struct voxel space;
-    // struct coords space_size = {10,10,10};
-    // init_voxel(&space, space_size);
-
-
-    // inizializzazione del cristallo iniziale
-
-    // struct coords initial_crystal = {5 * 16, 5 * 16, 5 * 16};
-    // setValue(&space, initial_crystal, -1);
-
-    // inizializzazione delle particelle
-
-    // dinamic_list *particle_list = dinamic_list_new();
-
-    // inizializzazione della lista delle particelle da cristallizzare
-
-    // dinamic_list *freezed = dinamic_list_new();
-    
-    // init_particles(particle_list, PART_NUM, &rng, &space);
-
-    // while(particle_list->last > 0) {
-    //      muove le particelle
+    // muove le particelle
     // per ogni particella
     for (int i = particle_list->last; i >= 0; i--){
         // valore presente in una cella del voxel
@@ -146,44 +125,46 @@ void single_core_dla(struct voxel *space, dinamic_list *particle_list, dinamic_l
         }
         // setto il valore della cella a -1
         setValue(space, *((struct coords *) e.value), -1);
-        printf("Crystalized: {%d, %d, %d}\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z);
+        if(particle_list->last % 1000 == 0)
+            printf("Crystalized: {%d, %d, %d} - %ld / %d\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z, particle_list->last, PART_NUM);
         free(e.value);
     }
-    // }
-    // return space;
 }
 
 
-int main(int argc, char const *argv[])
-{
-    int rng = 69420;
+//commentato per problema doppio main
+
+// int main(int argc, char const *argv[])
+// {
+//     int rng = 69420;
     
-    // inizializzazione del volxel
+//     // inizializzazione del volxel
 
-    struct voxel space;
-    struct coords space_size = {10,10,10};
-    init_voxel(&space, space_size);
+//     struct voxel space;
+//     struct coords space_size = {10,10,10};
+//     init_voxel(&space, space_size);
 
 
-    // inizializzazione del cristallo iniziale
+//     // inizializzazione del cristallo iniziale
 
-    struct coords initial_crystal = {5 * 16, 5 * 16, 5 * 16};
-    setValue(&space, initial_crystal, -1);
+//     struct coords initial_crystal = {5 * 16, 5 * 16, 5 * 16};
+//     setValue(&space, initial_crystal, -1);
 
-    // inizializzazione delle particelle
+//     // inizializzazione delle particelle
 
-    dinamic_list *particle_list = dinamic_list_new();
+//     dinamic_list *particle_list = dinamic_list_new();
 
-    // inizializzazione della lista delle particelle da cristallizzare
+//     // inizializzazione della lista delle particelle da cristallizzare
 
-    dinamic_list *freezed = dinamic_list_new();
+//     dinamic_list *freezed = dinamic_list_new();
     
-    init_particles(particle_list, PART_NUM, &rng, &space);
+//     init_particles(particle_list, PART_NUM, &rng, &space);
 
-    while(particle_list->last >= 0) {
-        single_core_dla(&space, particle_list, freezed, &rng);
-    }
+//     while(particle_list->last >= 0) {
+//         single_core_dla(&space, particle_list, freezed, &rng);
+//     }
     
     
-    return 0;
-}
+//     return 0;
+// }
+

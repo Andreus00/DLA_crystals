@@ -63,14 +63,16 @@ void make_grass(scene_data& scene, const instance_data& object,
     
     // inizializzazione del volxel
 
+    const int W = 8;
+
     struct voxel space;
-    struct coords space_size = {10,10,10};
+    struct coords space_size = {W, W, W};
     init_voxel(&space, space_size);
 
 
     // inizializzazione del cristallo iniziale
 
-    struct coords initial_crystal = {5 * 16, 5 * 16, 5 * 16};
+    struct coords initial_crystal = {W / 2 * 16, W / 2 * 16, W / 2 * 16};
     setValue(&space, initial_crystal, -1);
 
     // inizializzazione delle particelle
@@ -87,27 +89,38 @@ void make_grass(scene_data& scene, const instance_data& object,
         single_core_dla(&space, particle_list, freezed, &rng);
     }
     
-    shape_data shape;
+    instance_data instance;
+    scene.shapes.push_back(make_box());
     struct coords s = getSize(&space);
     int size = s.x * s.y * s.z;
-    for(int i = 0; i <  size; i++) {
-        struct chunk c = space.chunks[i];
-        for(int x = 0 ; x < CHUNK_SIZE; x++) {
-            for(int y = 0 ; y < CHUNK_SIZE; y++) {
-                for(int z = 0 ; z < CHUNK_SIZE; z++) {
-                    auto cell = c[z][y][x];
-                    if (cell == -1){
-                        shape.
+    for(int i = 0; i < W; i++) {    // Ho W * W * W chunk
+        for(int j = 0; j < W; j++) {
+            for(int k = 0; k < W; k++) {
+                int index = W * W * i + W * j + k;
+                struct chunk c = space.chunks[index];
+                
+                for(int x = 0 ; x < CHUNK_SIZE; x++) {
+                    for(int y = 0 ; y < CHUNK_SIZE; y++) {
+                        for(int z = 0 ; z < CHUNK_SIZE; z++) {
+                            auto cell = c.blocks[z][y][x];
+                            //std::cout << i << "i "<< x << "x "<< y << "y "<< z << "z\n";
+                            if (cell == -1){
+                                instance.shape=scene.shapes.size()-1;
+                                instance.material= 0;
+                                instance.frame.o=vec3f{float( x + CHUNK_SIZE * k - W / 2 * CHUNK_SIZE),float( y + CHUNK_SIZE * j - W / 2 * CHUNK_SIZE),float(z + CHUNK_SIZE * i - W / 2 * CHUNK_SIZE)};
 
+                                scene.instances.push_back(instance);
+
+                            }
+                        }
                     }
                 }
             }
         }
-        
-        
     }
     
 }
 /////////////////////////////////////////////////
 
 }  // namespace yocto
+
