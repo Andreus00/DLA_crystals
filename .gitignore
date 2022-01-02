@@ -1,1 +1,4 @@
 bin
+src/visualizer/bin
+src/visualizer/out
+src/visualizer/outs
