@@ -1,4 +1,4 @@
-# Install script for directory: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
+# Install script for directory: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto/cmake_install.cmake")
-  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model/cmake_install.cmake")
-  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui/cmake_install.cmake")
+  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto/cmake_install.cmake")
+  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model/cmake_install.cmake")
+  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui/cmake_install.cmake")
 
 endif()
 

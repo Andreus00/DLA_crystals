@@ -6,7 +6,7 @@
     #include "../../../utils/dinamic_list.h"
 #endif
 #include <omp.h>
-#define PART_NUM 8000
+#define PART_NUM 10000000
 #define NUM_THREADS 4
 
 struct coords *get_random_position_atomic(struct coords voxel_size, int* rng) {
@@ -57,7 +57,7 @@ void move_particle_atomic(struct coords *c1, struct coords *out, int* rng, struc
 
 void init_particles_parallel(struct coords **list, int num, int* rng, struct voxel *v) {
     struct coords size = getSize(v);
-    #pragma omp parallel for schedule(static, 30) num_threads(NUM_THREADS)
+    #pragma omp parallel for  num_threads(NUM_THREADS)
     for (int i=0; i<num; i++) {
         list[i] = get_random_position_atomic(size, rng);
     }
@@ -66,42 +66,54 @@ void init_particles_parallel(struct coords **list, int num, int* rng, struct vox
 void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, int *rng) { 
     omp_set_num_threads(NUM_THREADS);
     
+    struct coords voxel_size = getSize(space);
     // per ogni particella
-    #pragma omp parallel for schedule(static, 30)
-    for (int i = 0; i <= particles->last1; i++) {
-        // valore presente in una cella del voxel
-        int cell_value;
-        struct coords *old_position = (struct coords *)particles->list1[i];
-        // controlla se la particella che si vuole muovere è stata cristallizzata
-        getValue(space,*old_position, &cell_value);
-        // particella  non cristallizzata
-        if(cell_value != -1){
-            // calcolo nuova posizione della particella
-            struct coords new_position;
-            move_particle_atomic(old_position, &new_position, rng, getSize(space));
-            // controllo se la particella si sta spostando verso un cristallo
-            getValue(space, new_position, &cell_value);
-            //particella da cristallizzare
-            if(cell_value ==-1){
-                // aggiunge alla lista di particelle da cristallizzare
-                dinamic_list_add(particles->freezed, old_position);
-            }
-            // si muove verso uno spazio vuoto
-            else{
-                // aggiorna la posizione della particella con la nuova posizione
-                #pragma omp critical
-                {
-                    particles->last2++;
-                    particles->list2[particles->last2] = particles->list1[i];
+    
+    int rng_ = *rng;
+    atomic_random_float(rng);
+
+    #pragma omp parallel firstprivate(rng_)
+    {
+        rng_ += omp_get_thread_num();
+        #pragma omp for
+        for (int i = 0; i <= particles->last1; i++) {
+            // printf("%d\n", rng_);
+            // valore presente in una cella del voxel
+            int cell_value;
+            struct coords *old_position = (struct coords *)particles->list1[i];
+            // controlla se la particella che si vuole muovere è stata cristallizzata
+            getValue(space,*old_position, &cell_value);
+            // particella  non cristallizzata
+            if(cell_value != -1) {
+                // calcolo nuova posizione della particella
+                struct coords new_position;
+                move_particle_atomic(old_position, &new_position, &rng_, voxel_size);
+                // controllo se la particella si sta spostando verso un cristallo
+                getValue(space, new_position, &cell_value);
+                //particella da cristallizzare
+                if(cell_value ==-1){
+                    // aggiunge alla lista di particelle da cristallizzare
+                    dinamic_list_add(particles->freezed, old_position);
+                    particles->list1[i] = NULL;
                 }
-                *particles->list1[i] = new_position;
+                // si muove verso uno spazio vuoto
+                else{
+                    // aggiorna la posizione della particella con la nuova posizione
+                    
+                    *particles->list1[i] = new_position;
+                }
             }
-        }
-        // particella cristallizzata
-        else{
-            free(particles->list1[i]);
+            // particella cristallizzata
+            else{
+                free(particles->list1[i]);
+                particles->list1[i] = NULL;
+            }
         }
     }
+    
+    //printf("%d, %d\n", particles->last1, *rng);
+    
+
     //      cristallizza le particelle che si trovano vicino a un cristallo
     // ciclo sulle particelle che devono essere cristallizzate
     for(int i = particles->freezed->last; i >= 0; i--) {
@@ -113,10 +125,17 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, 
         }
         // setto il valore della cella a -1
         setValue(space, *((struct coords *) e.value), -1);
-        if(particles->last2 % ((int)(PART_NUM / 10)) == 0)
-            printf("Crystalized: {%d, %d, %d} - %d / %d\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z, particles->last2, PART_NUM);
+        if(particles->last1 % ((int)(PART_NUM / 10)) == 0)
+            printf("Crystalized: {%d, %d, %d} - %d / %d\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z, particles->last1, PART_NUM);
         free(e.value);
     }
+    int last = -1;
+    for(int i = 0; i <= particles->last1; i++){
+        if (particles->list1[i] != NULL)
+            particles->list1[++last] = particles->list1[i];
+    }
+    particles->last1 = last;
+
 }
 // void main(){
 //     struct coords list1[PART_NUM];

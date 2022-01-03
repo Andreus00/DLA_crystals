@@ -117,7 +117,7 @@ float random_float(int* rng) {
 // pseudo random function
 float atomic_random_float(int* rng) {
     int n  = (*rng << 13U) ^ *rng;
-    (*rng)++;
+    (*rng) *= 6364136223846793005ULL;
     // #pragma omp parallel for
     // for(int i = 0 ; i < 100; i++) {
     //     printf("%d ", i);

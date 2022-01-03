@@ -38,7 +38,7 @@
 #include <iostream>
 
 #include "ext/perlin-noise/noise1234.h"
-#include "../../../generator/serial/single_core_dla.c"
+#include "../../../generator/serial/single_core_dla_v2.c"
 #include "../../../generator/parallel/parallel_dla_openmp.c"
 // -----------------------------------------------------------------------------
 // USING DIRECTIVES

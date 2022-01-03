@@ -30,9 +30,8 @@ struct voxel {
 
 struct particle_lists {
     struct coords **list1;
-    struct coords **list2;
     dinamic_list *freezed;
-    int last1, last2;
+    int last1;
 };
 
 // initialize a voxel
