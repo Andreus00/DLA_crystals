@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/
+cmake_ninja_workdir = /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -66,7 +66,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
 # =============================================================================
 
 
@@ -74,7 +74,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build exts/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -86,7 +86,7 @@ build exts/rebuild_cache: phony exts/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build exts/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -95,7 +95,7 @@ build exts/edit_cache: phony exts/CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/CMakeLists.txt
 # =============================================================================
 
 
@@ -103,7 +103,7 @@ build exts/edit_cache: phony exts/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build exts/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -115,7 +115,7 @@ build exts/glfw/rebuild_cache: phony exts/glfw/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build exts/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -124,7 +124,7 @@ build exts/glfw/edit_cache: phony exts/glfw/CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/CMakeLists.txt
 # =============================================================================
 
 
@@ -132,7 +132,7 @@ build exts/glfw/edit_cache: phony exts/glfw/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build exts/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -144,7 +144,7 @@ build exts/glfw/src/rebuild_cache: phony exts/glfw/src/CMakeFiles/rebuild_cache.
 # Utility command for edit_cache
 
 build exts/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -160,131 +160,131 @@ build exts/glfw/src/edit_cache: phony exts/glfw/src/CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_glfw: phony || exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/context.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/init.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/input.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/window.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
-build exts/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
+build exts/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = exts/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d
   FLAGS = -O2 -g -DNDEBUG -fPIC -Wall -std=gnu99
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/src -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
   OBJECT_DIR = exts/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = exts/glfw/src/CMakeFiles/glfw.dir
 
@@ -306,7 +306,7 @@ build ../../bin/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_RelWithDebInfo exts/gl
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
 # =============================================================================
 
 
@@ -314,7 +314,7 @@ build ../../bin/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_RelWithDebInfo exts/gl
 # Utility command for rebuild_cache
 
 build libs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -326,7 +326,7 @@ build libs/rebuild_cache: phony libs/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build libs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -335,7 +335,7 @@ build libs/edit_cache: phony libs/CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
 # =============================================================================
 
 
@@ -343,7 +343,7 @@ build libs/edit_cache: phony libs/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build libs/yocto/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -355,7 +355,7 @@ build libs/yocto/rebuild_cache: phony libs/yocto/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build libs/yocto/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -371,80 +371,80 @@ build libs/yocto/edit_cache: phony libs/yocto/CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_yocto: phony || libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_modelio.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_modelio.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_modelio.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_modelio.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_modelio.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_bvh.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_bvh.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_bvh.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_bvh.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_bvh.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_shape.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_shape.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_shape.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_shape.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_shape.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_mesh.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_mesh.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_mesh.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_mesh.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_mesh.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_image.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_image.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_image.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_image.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_image.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_scene.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_scene.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_scene.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_scene.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_scene.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_trace.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_trace.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_trace.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_trace.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_trace.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_sceneio.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_sceneio.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_sceneio.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_sceneio.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_sceneio.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/yocto_cli.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_cli.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/yocto_cli.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/yocto_cli.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/yocto_cli.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir
 
-build libs/yocto/CMakeFiles/yocto.dir/ext/stb_image.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext/stb_image.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/ext/stb_image.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext/stb_image.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/ext/stb_image.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir/ext
 
-build libs/yocto/CMakeFiles/yocto.dir/ext/tinyexr.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext/tinyexr.cpp || cmake_object_order_depends_target_yocto
+build libs/yocto/CMakeFiles/yocto.dir/ext/tinyexr.cpp.o: CXX_COMPILER__yocto_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext/tinyexr.cpp || cmake_object_order_depends_target_yocto
   DEP_FILE = libs/yocto/CMakeFiles/yocto.dir/ext/tinyexr.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto/ext
   OBJECT_DIR = libs/yocto/CMakeFiles/yocto.dir
   OBJECT_FILE_DIR = libs/yocto/CMakeFiles/yocto.dir/ext
 
@@ -466,7 +466,7 @@ build ../../bin/libyocto.a: CXX_STATIC_LIBRARY_LINKER__yocto_RelWithDebInfo libs
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
 # =============================================================================
 
 
@@ -474,7 +474,7 @@ build ../../bin/libyocto.a: CXX_STATIC_LIBRARY_LINKER__yocto_RelWithDebInfo libs
 # Utility command for edit_cache
 
 build libs/yocto_model/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -486,7 +486,7 @@ build libs/yocto_model/edit_cache: phony libs/yocto_model/CMakeFiles/edit_cache.
 # Utility command for rebuild_cache
 
 build libs/yocto_model/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -502,17 +502,17 @@ build libs/yocto_model/rebuild_cache: phony libs/yocto_model/CMakeFiles/rebuild_
 
 build cmake_object_order_depends_target_yocto_model: phony || cmake_object_order_depends_target_yocto
 
-build libs/yocto_model/CMakeFiles/yocto_model.dir/yocto_model.cpp.o: CXX_COMPILER__yocto_model_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/yocto_model.cpp || cmake_object_order_depends_target_yocto_model
+build libs/yocto_model/CMakeFiles/yocto_model.dir/yocto_model.cpp.o: CXX_COMPILER__yocto_model_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/yocto_model.cpp || cmake_object_order_depends_target_yocto_model
   DEP_FILE = libs/yocto_model/CMakeFiles/yocto_model.dir/yocto_model.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
+  FLAGS = -O2 -g -DNDEBUG -fopenmp -std=gnu++17
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
   OBJECT_DIR = libs/yocto_model/CMakeFiles/yocto_model.dir
   OBJECT_FILE_DIR = libs/yocto_model/CMakeFiles/yocto_model.dir
 
-build libs/yocto_model/CMakeFiles/yocto_model.dir/ext/perlin-noise/noise1234.cpp.o: CXX_COMPILER__yocto_model_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/ext/perlin-noise/noise1234.cpp || cmake_object_order_depends_target_yocto_model
+build libs/yocto_model/CMakeFiles/yocto_model.dir/ext/perlin-noise/noise1234.cpp.o: CXX_COMPILER__yocto_model_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/ext/perlin-noise/noise1234.cpp || cmake_object_order_depends_target_yocto_model
   DEP_FILE = libs/yocto_model/CMakeFiles/yocto_model.dir/ext/perlin-noise/noise1234.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
+  FLAGS = -O2 -g -DNDEBUG -fopenmp -std=gnu++17
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_model/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
   OBJECT_DIR = libs/yocto_model/CMakeFiles/yocto_model.dir
   OBJECT_FILE_DIR = libs/yocto_model/CMakeFiles/yocto_model.dir/ext/perlin-noise
 
@@ -534,7 +534,7 @@ build ../../bin/libyocto_model.a: CXX_STATIC_LIBRARY_LINKER__yocto_model_RelWith
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/CMakeLists.txt
 # =============================================================================
 
 
@@ -542,7 +542,7 @@ build ../../bin/libyocto_model.a: CXX_STATIC_LIBRARY_LINKER__yocto_model_RelWith
 # Utility command for rebuild_cache
 
 build libs/yocto_gui/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -554,7 +554,7 @@ build libs/yocto_gui/rebuild_cache: phony libs/yocto_gui/CMakeFiles/rebuild_cach
 # Utility command for edit_cache
 
 build libs/yocto_gui/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -570,99 +570,99 @@ build libs/yocto_gui/edit_cache: phony libs/yocto_gui/CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_yocto_gui: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_yocto
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_opengl.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_opengl.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_opengl.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_opengl.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_opengl.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_shade.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_shade.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_shade.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_shade.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_shade.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_imgui.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_imgui.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_imgui.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_imgui.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_imgui.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_glview.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_glview.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_glview.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/yocto_glview.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/yocto_glview.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_demo.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_demo.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_demo.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_demo.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_demo.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_draw.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_draw.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_draw.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_draw.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_draw.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_widgets.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_widgets.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_widgets.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_tables.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_tables.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_tables.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_tables.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_tables.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_glfw.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_impl_glfw.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_glfw.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_impl_glfw.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_glfw.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_opengl3.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_opengl3.cpp.o: CXX_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/imgui/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui/imgui_impl_opengl3.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/imgui
 
-build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/glad/glad.c.o: C_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/glad/glad.c || cmake_object_order_depends_target_yocto_gui
+build libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/glad/glad.c.o: C_COMPILER__yocto_gui_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/ext/glad/glad.c || cmake_object_order_depends_target_yocto_gui
   DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DYOCTO_OPENGL
   DEP_FILE = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/glad/glad.c.o.d
   FLAGS = -O2 -g -DNDEBUG
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/. -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui/./ext -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir
   OBJECT_FILE_DIR = libs/yocto_gui/CMakeFiles/yocto_gui.dir/ext/glad
 
@@ -684,7 +684,7 @@ build ../../bin/libyocto_gui.a: CXX_STATIC_LIBRARY_LINKER__yocto_gui_RelWithDebI
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/CMakeLists.txt
 # =============================================================================
 
 
@@ -692,7 +692,7 @@ build ../../bin/libyocto_gui.a: CXX_STATIC_LIBRARY_LINKER__yocto_gui_RelWithDebI
 # Utility command for rebuild_cache
 
 build apps/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -704,7 +704,7 @@ build apps/rebuild_cache: phony apps/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build apps/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -713,7 +713,7 @@ build apps/edit_cache: phony apps/CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/CMakeLists.txt
 # =============================================================================
 
 
@@ -721,7 +721,7 @@ build apps/edit_cache: phony apps/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build apps/ymodel/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -733,7 +733,7 @@ build apps/ymodel/rebuild_cache: phony apps/ymodel/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build apps/ymodel/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -749,10 +749,10 @@ build apps/ymodel/edit_cache: phony apps/ymodel/CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_ymodel: phony || cmake_object_order_depends_target_yocto cmake_object_order_depends_target_yocto_model
 
-build apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o: CXX_COMPILER__ymodel_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/ymodel/ymodel.cpp || cmake_object_order_depends_target_ymodel
+build apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o: CXX_COMPILER__ymodel_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/ymodel/ymodel.cpp || cmake_object_order_depends_target_ymodel
   DEP_FILE = apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
+  FLAGS = -O2 -g -DNDEBUG -fopenmp -std=gnu++17
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs
   OBJECT_DIR = apps/ymodel/CMakeFiles/ymodel.dir
   OBJECT_FILE_DIR = apps/ymodel/CMakeFiles/ymodel.dir
 
@@ -764,9 +764,9 @@ build apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o: CXX_COMPILER__ymodel_RelWi
 #############################################
 # Link the executable ../../bin/ymodel
 
-build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_model.a ../../bin/libyocto.a || ../../bin/libyocto.a ../../bin/libyocto_model.a
+build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_model.a ../../bin/libyocto.a /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so || ../../bin/libyocto.a ../../bin/libyocto_model.a
   FLAGS = -O2 -g -DNDEBUG
-  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_model.a  ../../bin/libyocto.a  -lpthread
+  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_model.a  ../../bin/libyocto.a  -lpthread  /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so  /usr/lib/x86_64-linux-gnu/libpthread.so
   OBJECT_DIR = apps/ymodel/CMakeFiles/ymodel.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -775,7 +775,7 @@ build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/CMakeLists.txt
+# /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/CMakeLists.txt
 # =============================================================================
 
 
@@ -783,7 +783,7 @@ build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel
 # Utility command for rebuild_cache
 
 build apps/yscene/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene && /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -795,7 +795,7 @@ build apps/yscene/rebuild_cache: phony apps/yscene/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build apps/yscene/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  COMMAND = cd /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene && /opt/cmake-3.21.3-linux-x86_64/bin/cmake-gui -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -811,11 +811,11 @@ build apps/yscene/edit_cache: phony apps/yscene/CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_yscene: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_yocto cmake_object_order_depends_target_yocto_gui
 
-build apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o: CXX_COMPILER__yscene_RelWithDebInfo /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/yscene/yscene.cpp || cmake_object_order_depends_target_yscene
+build apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o: CXX_COMPILER__yscene_RelWithDebInfo /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/apps/yscene/yscene.cpp || cmake_object_order_depends_target_yscene
   DEFINES = -DYOCTO_OPENGL
   DEP_FILE = apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++17
-  INCLUDES = -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
+  INCLUDES = -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs -I/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/exts/glfw/include
   OBJECT_DIR = apps/yscene/CMakeFiles/yscene.dir
   OBJECT_FILE_DIR = apps/yscene/CMakeFiles/yscene.dir
 
@@ -865,77 +865,77 @@ build yscene: phony ../../bin/yscene
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
 
 build all: phony exts/all libs/all apps/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps
 
 build apps/all: phony apps/ymodel/all apps/yscene/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/ymodel
 
 build apps/ymodel/all: phony ../../bin/ymodel
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene
 
 build apps/yscene/all: phony ../../bin/yscene
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts
 
 build exts/all: phony exts/glfw/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw
 
 build exts/glfw/all: phony exts/glfw/src/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/glfw/src
 
 build exts/glfw/src/all: phony ../../bin/libglfw3.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs
 
 build libs/all: phony libs/yocto/all libs/yocto_model/all libs/yocto_gui/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto
 
 build libs/yocto/all: phony ../../bin/libyocto.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_gui
 
 build libs/yocto_gui/all: phony ../../bin/libyocto_gui.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model
+# Folder: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/yocto_model
 
 build libs/yocto_model/all: phony ../../bin/libyocto_model.a
 
@@ -946,14 +946,14 @@ build libs/yocto_model/all: phony ../../bin/libyocto_model.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../../CMakeLists.txt ../../apps/CMakeLists.txt ../../apps/ymodel/CMakeLists.txt ../../apps/yscene/CMakeLists.txt ../../exts/CMakeLists.txt ../../exts/glfw/CMakeLists.txt ../../exts/glfw/src/CMakeLists.txt ../../exts/glfw/src/glfw3.pc.in ../../exts/glfw/src/glfw3Config.cmake.in ../../exts/glfw/src/glfw_config.h.in ../../libs/CMakeLists.txt ../../libs/yocto/CMakeLists.txt ../../libs/yocto_gui/CMakeLists.txt ../../libs/yocto_model/CMakeLists.txt /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeDependentOption.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckFunctionExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckIncludeFile.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFontconfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFreetype.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenGL.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageMessage.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPkgConfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindThreads.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindX11.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.3/CMakeCCompiler.cmake CMakeFiles/3.21.3/CMakeCXXCompiler.cmake CMakeFiles/3.21.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../../CMakeLists.txt ../../apps/CMakeLists.txt ../../apps/ymodel/CMakeLists.txt ../../apps/yscene/CMakeLists.txt ../../exts/CMakeLists.txt ../../exts/glfw/CMakeLists.txt ../../exts/glfw/src/CMakeLists.txt ../../exts/glfw/src/glfw3.pc.in ../../exts/glfw/src/glfw3Config.cmake.in ../../exts/glfw/src/glfw_config.h.in ../../libs/CMakeLists.txt ../../libs/yocto/CMakeLists.txt ../../libs/yocto_gui/CMakeLists.txt ../../libs/yocto_model/CMakeLists.txt /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeDependentOption.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckFunctionExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckIncludeFile.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFontconfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFreetype.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenGL.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenMP.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageMessage.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPkgConfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindThreads.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindX11.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.3/CMakeCCompiler.cmake CMakeFiles/3.21.3/CMakeCXXCompiler.cmake CMakeFiles/3.21.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../../CMakeLists.txt ../../apps/CMakeLists.txt ../../apps/ymodel/CMakeLists.txt ../../apps/yscene/CMakeLists.txt ../../exts/CMakeLists.txt ../../exts/glfw/CMakeLists.txt ../../exts/glfw/src/CMakeLists.txt ../../exts/glfw/src/glfw3.pc.in ../../exts/glfw/src/glfw3Config.cmake.in ../../exts/glfw/src/glfw_config.h.in ../../libs/CMakeLists.txt ../../libs/yocto/CMakeLists.txt ../../libs/yocto_gui/CMakeLists.txt ../../libs/yocto_model/CMakeLists.txt /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeDependentOption.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckFunctionExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckIncludeFile.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFontconfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFreetype.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenGL.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageMessage.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPkgConfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindThreads.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindX11.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.3/CMakeCCompiler.cmake CMakeFiles/3.21.3/CMakeCXXCompiler.cmake CMakeFiles/3.21.3/CMakeSystem.cmake: phony
+build ../../CMakeLists.txt ../../apps/CMakeLists.txt ../../apps/ymodel/CMakeLists.txt ../../apps/yscene/CMakeLists.txt ../../exts/CMakeLists.txt ../../exts/glfw/CMakeLists.txt ../../exts/glfw/src/CMakeLists.txt ../../exts/glfw/src/glfw3.pc.in ../../exts/glfw/src/glfw3Config.cmake.in ../../exts/glfw/src/glfw_config.h.in ../../libs/CMakeLists.txt ../../libs/yocto/CMakeLists.txt ../../libs/yocto_gui/CMakeLists.txt ../../libs/yocto_model/CMakeLists.txt /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeDependentOption.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckFunctionExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckIncludeFile.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Compiler/GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFontconfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindFreetype.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenGL.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindOpenMP.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPackageMessage.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindPkgConfig.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindThreads.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/FindX11.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/Linux.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake /opt/cmake-3.21.3-linux-x86_64/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.3/CMakeCCompiler.cmake CMakeFiles/3.21.3/CMakeCXXCompiler.cmake CMakeFiles/3.21.3/CMakeSystem.cmake: phony
 
 
 #############################################

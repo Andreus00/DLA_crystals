@@ -1,12 +1,17 @@
 #include <stdio.h>
 
-#include "../../../utils/utils.c"
-#include "../../../utils/dinamic_list.h"
-#define PART_NUM 1000
+#ifndef UTILS
+    #include "../../../utils/utils.c"
+#endif
+#ifndef DINAMIC_LISTS
+    #include "../../../utils/dinamic_list.h"
+#endif
+
+#define PART_NUM 8000
 
 struct coords *get_random_position(struct coords voxel_size, int* rng) {
     struct coords *ret = (struct coords *) malloc(sizeof(struct coords));
-    ret->x = (int) (random_float(rng) * voxel_size.x);
+    ret->x = (int) (atomic_random_float(rng) * voxel_size.x);
     ret->y = (int) (random_float(rng) * voxel_size.y);
     ret->z = (int) (random_float(rng) * voxel_size.z);
     switch((int) random_float(rng) * 6) {
@@ -34,42 +39,18 @@ struct coords *get_random_position(struct coords voxel_size, int* rng) {
 }
 void move_particle(struct coords *c1, struct coords *out, int* rng, struct coords voxel_size){
 
-    int dir = (int) (random_float(rng)*6);
     out->x = c1->x;
     out->y = c1->y;
     out->z = c1->z;
-    switch (dir){
-        case 0:
-            if(out->x < voxel_size.x - 1 && out->y < voxel_size.y && out->z < voxel_size.z){
-                out->x++;
-                out->y++;
-                out->z++;
-            }
-            break;
-        case 1:
-            if(out->x < voxel_size.x - 1 ){
-                out->x++;
-            }
-            break;
-        case 2:
-            if(out->y < voxel_size.y){
-                out->y++;
-            }
-            break;
-        case 3:
-            if(out->z < voxel_size.z){
-                out->z++; // TODO
-            }
-            break;
-        case 4:
-            if(out->z < voxel_size.z - 1)
-                out->z++;
-            break;
-        default:
-            if(out->z > 0)
-                out->z--;
-            break;
-    };
+    int rx = ((int) (random_float(rng) * 3)) - 1;
+    int ry = ((int) (random_float(rng) * 3)) - 1;
+    int rz = ((int) (random_float(rng) * 3)) - 1;
+    if((rx + out->x ) > 0 &&  (rx + out->x ) < voxel_size.x)
+        out->x += rx;
+    if((ry + out->y ) > 0 &&  (ry + out->y ) < voxel_size.y)
+        out->y += ry;
+    if((rz + out->z ) > 0 &&  (rz + out->z ) < voxel_size.z)
+        out->z += rz;
     return;
 }
 
@@ -125,7 +106,7 @@ void single_core_dla(struct voxel *space, dinamic_list *particle_list, dinamic_l
         }
         // setto il valore della cella a -1
         setValue(space, *((struct coords *) e.value), -1);
-        if(particle_list->last % 1000 == 0)
+        if(particle_list->last % ((int)(PART_NUM / 10)) == 0)
             printf("Crystalized: {%d, %d, %d} - %ld / %d\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z, particle_list->last, PART_NUM);
         free(e.value);
     }

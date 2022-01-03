@@ -1,5 +1,10 @@
 #include <math.h>
 
+#ifndef DINAMIC_LISTS
+    #include "dinamic_list.h"
+#endif
+#define UTILS
+
 #define CHUNK_SIZE 16
 
 // size of voxels in chunks
@@ -23,6 +28,13 @@ struct voxel {
     struct coords c;         // Size of the chunks
 };
 
+struct particle_lists {
+    struct coords **list1;
+    struct coords **list2;
+    dinamic_list *freezed;
+    int last1, last2;
+};
+
 // initialize a voxel
 void init_voxel(struct voxel* v, struct coords c);
 
@@ -43,3 +55,6 @@ struct coords getSize(struct voxel* v);
 // random generator
 
 float random_float(int *rng);
+
+float atomic_random_float(int *rng);
+

@@ -9,8 +9,15 @@ target_include_directories(yocto_model PUBLIC ${CMAKE_SOURCE_DIR}/libs)
 set_target_properties(yocto_model PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES)
 
 target_link_libraries(yocto_model PUBLIC yocto)
-
+#target_compile_options(yocto_model PUBLIC -fopenmp)
 # warning flags
+
+
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(yocto_model PUBLIC OpenMP::OpenMP_CXX)
+endif()
+
 if(APPLE)
   target_compile_options(yocto_model PUBLIC -Wall -Wconversion -Wno-sign-conversion -Wno-implicit-float-conversion)
 endif(APPLE)

@@ -15,6 +15,7 @@ Ogni volta che invece si rimuove un elemento e c'è troppa memoria inutilizzata,
 #include <stdlib.h>
 #include <pthread.h>
 
+#define DINAMIC_LISTS
 
 #define MIN_SIZE 10     // grandezza minima della lista
 

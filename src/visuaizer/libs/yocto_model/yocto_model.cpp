@@ -39,6 +39,7 @@
 
 #include "ext/perlin-noise/noise1234.h"
 #include "../../../generator/serial/single_core_dla.c"
+#include "../../../generator/parallel/parallel_dla_openmp.c"
 // -----------------------------------------------------------------------------
 // USING DIRECTIVES
 // -----------------------------------------------------------------------------
@@ -60,6 +61,7 @@ namespace yocto {
 void make_grass(scene_data& scene, const instance_data& object,
     const vector<instance_data>& grasses, const grass_params& params) {
      int rng = 69420;
+     int const SERIAL = 0;
     
     // inizializzazione del volxel
 
@@ -75,18 +77,40 @@ void make_grass(scene_data& scene, const instance_data& object,
     struct coords initial_crystal = {W / 2 * 16, W / 2 * 16, W / 2 * 16};
     setValue(&space, initial_crystal, -1);
 
-    // inizializzazione delle particelle
-
-    dinamic_list *particle_list = dinamic_list_new();
 
     // inizializzazione della lista delle particelle da cristallizzare
 
     dinamic_list *freezed = dinamic_list_new();
     
-    init_particles(particle_list, PART_NUM, &rng, &space);
+    if (SERIAL) {
+        // inizializzazione delle particelle
 
-    while(particle_list->last >= 0) {
-        single_core_dla(&space, particle_list, freezed, &rng);
+        dinamic_list *particle_list = dinamic_list_new();
+        init_particles(particle_list, PART_NUM, &rng, &space);
+        while(particle_list->last >= 0) {
+            single_core_dla(&space, particle_list, freezed, &rng);
+        }
+    }
+    else {
+        struct particle_lists particles;
+        particles.list1= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
+        particles.list2= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
+        particles.freezed= freezed;
+        particles.last1= PART_NUM -1;
+        particles.last2= -1;
+        // for (int i = 0; i < 1000; i++)
+        //     printf("aaa");
+        init_particles_parallel(particles.list1, PART_NUM, &rng, &space);
+        
+        while(particles.last1 >= 0){
+            
+            parallel_dla_openmp(&space, &particles, &rng);
+            particles.last1 = particles.last2;
+            particles.last2 = -1;
+            struct coords **p = particles.list1;
+            particles.list1 = particles.list2;
+            particles.list2 = p;
+        }
     }
     
     instance_data instance;
@@ -107,8 +131,7 @@ void make_grass(scene_data& scene, const instance_data& object,
                             if (cell == -1){
                                 instance.shape=scene.shapes.size()-1;
                                 instance.material= 0;
-                                instance.frame.o=vec3f{float( x + CHUNK_SIZE * k - W / 2 * CHUNK_SIZE),float( y + CHUNK_SIZE * j - W / 2 * CHUNK_SIZE),float(z + CHUNK_SIZE * i - W / 2 * CHUNK_SIZE)};
-
+                                instance.frame.o=vec3f{float( x + CHUNK_SIZE * k - W * CHUNK_SIZE/ 2 ),float( y + CHUNK_SIZE * j - W / 2 * CHUNK_SIZE),float(z + CHUNK_SIZE * i - W / 2 * CHUNK_SIZE)};
                                 scene.instances.push_back(instance);
 
                             }

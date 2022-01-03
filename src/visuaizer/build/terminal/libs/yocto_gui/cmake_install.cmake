@@ -1,4 +1,4 @@
-# Install script for directory: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui
+# Install script for directory: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/libs/yocto_gui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

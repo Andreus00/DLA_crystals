@@ -138,54 +138,7 @@ void run(const vector<string>& args) {
 
   if (cell_size != 0.005) hparams.cell_size = cell_size;
   // create procedural geometry
-  if (woods) {
-    make_woods(scene, get_instance(scene, grassbase), woods);
-  }
-  if (tree) {
-    generate_tree(scene, {0, 0, 0},
-        {
-            0,
-            1,
-            0,
-        },
-        trparams);
-  }
-  if (terrain != "") {
-    make_terrain(scene.shapes[get_instance(scene, terrain).shape], tparams);
-  }
-  if (displacement != "") {
-    std::cout << world << cell << smooth_vor << voronoise_u << voronoise_v
-              << std::endl;
-    if (world) {
-      make_world(
-          scene.shapes[get_instance(scene, displacement).shape], dparams);
-    } else if (cell) {
-      make_cell_voro_displacement(
-          scene.shapes[get_instance(scene, displacement).shape], dparams);
-    } else if (smooth_vor) {
-      make_smooth_voro_displacement(
-          scene.shapes[get_instance(scene, displacement).shape], dparams);
-    } else if (voronoise_u >= 0 && voronoise_v >= 0) {
-      make_voro_displacement(
-          scene.shapes[get_instance(scene, displacement).shape], dparams,
-          min(voronoise_u, 1.0f), min(voronoise_v, 1.0f));
-    } else {
-      make_displacement(
-          scene.shapes[get_instance(scene, displacement).shape], dparams);
-    }
-  }
-  if (hair != "" && !dense_hair) {
-    scene.shapes[get_instance(scene, hair).shape]      = {};
-    scene.shape_names[get_instance(scene, hair).shape] = "hair";
-    if (sample_elimination) {
-      make_hair_sample_elimination(
-          scene.shapes[get_instance(scene, hair).shape],
-          scene.shapes[get_instance(scene, hairbase).shape], hparams);
-    } else {
-      make_hair(scene.shapes[get_instance(scene, hair).shape],
-          scene.shapes[get_instance(scene, hairbase).shape], hparams);
-    }
-  }
+  
   if (grass != "") {
     auto grasses = vector<instance_data>{};
     for (auto idx = 0; idx < scene.instances.size(); idx++) {
@@ -194,13 +147,6 @@ void run(const vector<string>& args) {
     }
     make_grass(scene, get_instance(scene, grassbase), grasses, gparams);
   }
-  if (hair != "" && dense_hair) {
-    scene.shapes[get_instance(scene, hair).shape]      = {};
-    scene.shape_names[get_instance(scene, hair).shape] = "hair";
-    make_dense_hair(scene, scene.shapes[get_instance(scene, hair).shape],
-        get_instance(scene, hairbase), hparams);
-  }
-
   // make a directory if needed
   if (!make_scene_directories(output, scene, error)) print_fatal(error);
 
