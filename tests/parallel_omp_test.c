@@ -6,7 +6,7 @@
 int main(int argc, char const *argv[])
 {
     // int rng = 69420;
-    int const SERIAL = 0100;
+    int const SERIAL = 0;
     
     // inizializzazione del volxel
 
@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
         }
     }
     else {
-        printf("Parallel\n");
+        printf("Parallel - Threads: %d\n", NUM_THREADS);
         
         init_particles_parallel(particles.list1, PART_NUM, &space);
         while(particles.last1 >= 0){
@@ -59,8 +59,6 @@ int main(int argc, char const *argv[])
             return 0;
         }
     }
-    for(int i = 0; i < ){
-
-    }
+    
     return 0;
 }
