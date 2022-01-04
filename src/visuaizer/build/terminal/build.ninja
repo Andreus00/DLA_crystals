@@ -764,9 +764,9 @@ build apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o: CXX_COMPILER__ymodel_RelWi
 #############################################
 # Link the executable ../../bin/ymodel
 
-build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_model.a ../../bin/libyocto.a /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so || ../../bin/libyocto.a ../../bin/libyocto_model.a
+build ../../bin/ymodel: CXX_EXECUTABLE_LINKER__ymodel_RelWithDebInfo apps/ymodel/CMakeFiles/ymodel.dir/ymodel.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_model.a ../../bin/libyocto.a /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a || ../../bin/libyocto.a ../../bin/libyocto_model.a
   FLAGS = -O2 -g -DNDEBUG
-  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_model.a  ../../bin/libyocto.a  -lpthread  /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so  -lpthread
+  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_model.a  ../../bin/libyocto.a  /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so  /usr/lib/x86_64-linux-gnu/libpthread.a
   OBJECT_DIR = apps/ymodel/CMakeFiles/ymodel.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -827,9 +827,9 @@ build apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o: CXX_COMPILER__yscene_RelWi
 #############################################
 # Link the executable ../../bin/yscene
 
-build ../../bin/yscene: CXX_EXECUTABLE_LINKER__yscene_RelWithDebInfo apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_gui.a ../../bin/libyocto.a ../../bin/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.so /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || ../../bin/libglfw3.a ../../bin/libyocto.a ../../bin/libyocto_gui.a
+build ../../bin/yscene: CXX_EXECUTABLE_LINKER__yscene_RelWithDebInfo apps/yscene/CMakeFiles/yscene.dir/yscene.cpp.o | ../../bin/libyocto.a ../../bin/libyocto_gui.a ../../bin/libyocto.a ../../bin/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || ../../bin/libglfw3.a ../../bin/libyocto.a ../../bin/libyocto_gui.a
   FLAGS = -O2 -g -DNDEBUG
-  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_gui.a  ../../bin/libyocto.a  ../../bin/libglfw3.a  -lrt  -lm  /usr/lib/x86_64-linux-gnu/libX11.so  -lpthread  -ldl
+  LINK_LIBRARIES = ../../bin/libyocto.a  ../../bin/libyocto_gui.a  ../../bin/libyocto.a  ../../bin/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  /usr/lib/x86_64-linux-gnu/libX11.so  -ldl
   OBJECT_DIR = apps/yscene/CMakeFiles/yscene.dir
   POST_BUILD = :
   PRE_LINK = :
