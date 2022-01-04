@@ -7,39 +7,38 @@
 #endif
 #include <omp.h>
 #define PART_NUM 10000000
-#define NUM_THREADS 4
+#define NUM_THREADS 2
 
-struct coords *get_random_position_atomic(struct coords voxel_size, int* rng) {
-    struct coords *ret = (struct coords *) malloc(sizeof(struct coords));
-    ret->x = (int) (atomic_random_float(rng) * voxel_size.x);
-    ret->y = (int) (atomic_random_float(rng) * voxel_size.y);
-    ret->z = (int) (atomic_random_float(rng) * voxel_size.z);
-    switch((int) atomic_random_float(rng) * 6) {
+struct particle *get_random_position_atomic(struct coords voxel_size, int seed) {
+    struct particle *ret = (struct particle *) malloc(sizeof(struct particle));
+    ret->rng = seed;
+    ret->coord.x = (int) (atomic_random_float(&ret->rng) * voxel_size.x);
+    ret->coord.y = (int) (atomic_random_float(&ret->rng) * voxel_size.y);
+    ret->coord.z = (int) (atomic_random_float(&ret->rng) * voxel_size.z);
+    switch((int) atomic_random_float(&ret->rng) * 6) {
         case 0:
-            ret->x = 0;
+            ret->coord.x = 0;
             break;
         case 1:
-            ret->x = voxel_size.x - 1;
+            ret->coord.x = voxel_size.x - 1;
             break;
         case 2:
-            ret->y =0;
+            ret->coord.y =0;
             break;
         case 3:
-            ret->y = voxel_size.y - 1;
+            ret->coord.y = voxel_size.y - 1;
             break;
         case 4:
-            ret->z = 0;
+            ret->coord.z = 0;
             break;
         default: 
-            ret->z = voxel_size.z - 1;
+            ret->coord.z = voxel_size.z - 1;
             break;
     }
     return ret;
     
 }
 void move_particle_atomic(struct coords *c1, struct coords *out, int* rng, struct coords voxel_size){
-
-    
     out->x = c1->x;
     out->y = c1->y;
     out->z = c1->z;
@@ -55,52 +54,48 @@ void move_particle_atomic(struct coords *c1, struct coords *out, int* rng, struc
     return;
 }
 
-void init_particles_parallel(struct coords **list, int num, int* rng, struct voxel *v) {
+void init_particles_parallel(struct particle **list, int num, struct voxel *v) {
     struct coords size = getSize(v);
     #pragma omp parallel for  num_threads(NUM_THREADS)
     for (int i=0; i<num; i++) {
-        list[i] = get_random_position_atomic(size, rng);
-    }
+        list[i] = get_random_position_atomic(size, i);
+    } 
 }
 
-void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, int *rng) { 
+void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) { 
     omp_set_num_threads(NUM_THREADS);
     
     struct coords voxel_size = getSize(space);
     // per ogni particella
     
-    int rng_ = *rng;
-    atomic_random_float(rng);
+    // int rng_ = *rng;
+    // atomic_random_float(rng);
 
-    #pragma omp parallel firstprivate(rng_)
-    {
-        rng_ += omp_get_thread_num();
-        #pragma omp for
+    #pragma omp parallel for// firstprivate(rng_)
         for (int i = 0; i <= particles->last1; i++) {
-            // printf("%d\n", rng_);
             // valore presente in una cella del voxel
             int cell_value;
-            struct coords *old_position = (struct coords *)particles->list1[i];
+            struct particle *part = (struct particle *)particles->list1[i];
             // controlla se la particella che si vuole muovere è stata cristallizzata
-            getValue(space,*old_position, &cell_value);
+            getValue(space, part->coord, &cell_value);
             // particella  non cristallizzata
             if(cell_value != -1) {
                 // calcolo nuova posizione della particella
                 struct coords new_position;
-                move_particle_atomic(old_position, &new_position, &rng_, voxel_size);
+                move_particle_atomic(&(part->coord), &new_position, &(part->rng), voxel_size);
                 // controllo se la particella si sta spostando verso un cristallo
                 getValue(space, new_position, &cell_value);
                 //particella da cristallizzare
                 if(cell_value ==-1){
                     // aggiunge alla lista di particelle da cristallizzare
-                    dinamic_list_add(particles->freezed, old_position);
+                    dinamic_list_add(particles->freezed, part);
                     particles->list1[i] = NULL;
                 }
                 // si muove verso uno spazio vuoto
                 else{
                     // aggiorna la posizione della particella con la nuova posizione
                     
-                    *particles->list1[i] = new_position;
+                    part->coord = new_position;
                 }
             }
             // particella cristallizzata
@@ -109,7 +104,7 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, 
                 particles->list1[i] = NULL;
             }
         }
-    }
+    
     
     //printf("%d, %d\n", particles->last1, *rng);
     
@@ -124,9 +119,9 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, 
             continue;
         }
         // setto il valore della cella a -1
-        setValue(space, *((struct coords *) e.value), -1);
+        setValue(space, ((struct particle *) e.value)->coord, -1);
         if(particles->last1 % ((int)(PART_NUM / 10)) == 0)
-            printf("Crystalized: {%d, %d, %d} - %d / %d\n",((struct coords *)e.value)->x, ((struct coords *)e.value)->y, ((struct coords *)e.value)->z, particles->last1, PART_NUM);
+            printf("Crystalized: {%d, %d, %d} - %d / %d\n",((struct particle *)e.value)->coord.x, ((struct particle *)e.value)->coord.y, ((struct particle *)e.value)->coord.z, particles->last1, PART_NUM);
         free(e.value);
     }
     int last = -1;
@@ -137,9 +132,3 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles, 
     particles->last1 = last;
 
 }
-// void main(){
-//     struct coords list1[PART_NUM];
-//     int list1_last = -1;
-//     struct coords list2[PART_NUM];
-//     int list1_last = -1;
-// }

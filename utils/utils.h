@@ -28,8 +28,13 @@ struct voxel {
     struct coords c;         // Size of the chunks
 };
 
+struct particle {
+    struct coords coord;
+    int rng;
+};
+
 struct particle_lists {
-    struct coords **list1;
+    struct particle **list1;
     dinamic_list *freezed;
     int last1;
 };

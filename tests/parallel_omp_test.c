@@ -5,8 +5,8 @@
 
 int main(int argc, char const *argv[])
 {
-    int rng = 69420;
-     int const SERIAL = 0;
+    // int rng = 69420;
+    int const SERIAL = 0100;
     
     // inizializzazione del volxel
 
@@ -27,18 +27,19 @@ int main(int argc, char const *argv[])
 
     dinamic_list *freezed = dinamic_list_new();
     struct timeval tval_before, tval_after, tval_result;
+    struct particle_lists particles;
+    particles.list1= (struct particle **) malloc(sizeof(struct particle *) * PART_NUM);
+    particles.freezed= freezed;
+    particles.last1= PART_NUM -1;
     if (SERIAL) {
         // inizializzazione delle particelle
         printf("Serial\n");
-        struct particle_lists particles;
-        particles.list1= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
-        particles.freezed= freezed;
-        particles.last1= PART_NUM -1;
-        init_particles(particles.list1, PART_NUM, &rng, &space);
+       
+        init_particles(particles.list1, PART_NUM, &space);
         
         while(particles.last1 >= 0) {
             gettimeofday(&tval_before, NULL);
-            single_core_dla(&space, &particles, &rng);
+            single_core_dla(&space, &particles);
             gettimeofday(&tval_after, NULL);
             timersub(&tval_after, &tval_before, &tval_result);
             printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
@@ -47,19 +48,19 @@ int main(int argc, char const *argv[])
     }
     else {
         printf("Parallel\n");
-        struct particle_lists particles;
-        particles.list1= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
-        particles.freezed= freezed;
-        particles.last1= PART_NUM -1;
-        init_particles_parallel(particles.list1, PART_NUM, &rng, &space);
+        
+        init_particles_parallel(particles.list1, PART_NUM, &space);
         while(particles.last1 >= 0){
             gettimeofday(&tval_before, NULL);
-            parallel_dla_openmp(&space, &particles, &rng);
+            parallel_dla_openmp(&space, &particles);
             gettimeofday(&tval_after, NULL);
             timersub(&tval_after, &tval_before, &tval_result);
             printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
             return 0;
         }
+    }
+    for(int i = 0; i < ){
+
     }
     return 0;
 }
