@@ -187,6 +187,18 @@ dinamic_list *dinamic_list_new() {
 }
 
 /*
+
+*/
+void dinamic_list_clear(dinamic_list *d) {
+    pthread_mutex_lock(d->mutex);
+    d->last = -1;
+    free((void *) d->list);
+    d->list = (void **) calloc(MIN_SIZE, sizeof(void *));
+    d->allocated_size = MIN_SIZE;
+    pthread_mutex_unlock(d->mutex);
+}
+
+/*
 Funzione che rimuove dalla lista passata in input l'elemento passato in input.
 Ritorna l'elemento eliminato o NULL se non è stato trovato.
 */

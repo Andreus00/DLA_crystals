@@ -7,7 +7,7 @@
 #endif
 #include <omp.h>
 #define PART_NUM 10000000
-#define NUM_THREADS 2
+#define NUM_THREADS 8
 
 struct particle *get_random_position_atomic(struct coords voxel_size, int seed) {
     struct particle *ret = (struct particle *) malloc(sizeof(struct particle));
@@ -23,7 +23,7 @@ struct particle *get_random_position_atomic(struct coords voxel_size, int seed) 
             ret->coord.x = voxel_size.x - 1;
             break;
         case 2:
-            ret->coord.y =0;
+            ret->coord.y = 0;
             break;
         case 3:
             ret->coord.y = voxel_size.y - 1;
@@ -58,7 +58,7 @@ void init_particles_parallel(struct particle **list, int num, struct voxel *v) {
     struct coords size = getSize(v);
     #pragma omp parallel for  num_threads(NUM_THREADS)
     for (int i=0; i<num; i++) {
-        list[i] = get_random_position_atomic(size, i);
+        list[i] = get_random_position_atomic(size, i + 1);
     } 
 }
 
@@ -70,8 +70,9 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) 
     
     // int rng_ = *rng;
     // atomic_random_float(rng);
-
-    #pragma omp parallel for// firstprivate(rng_)
+    #pragma omp parallel
+{
+    #pragma omp for schedule(dynamic, 1000)// firstprivate(rng_)
         for (int i = 0; i <= particles->last1; i++) {
             // valore presente in una cella del voxel
             int cell_value;
@@ -107,28 +108,36 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) 
     
     
     //printf("%d, %d\n", particles->last1, *rng);
-    
+    #pragma omp barrier
 
     //      cristallizza le particelle che si trovano vicino a un cristallo
     // ciclo sulle particelle che devono essere cristallizzate
-    for(int i = particles->freezed->last; i >= 0; i--) {
+    #pragma omp for
+    for(int i = 0; i  <= particles->freezed->last; i++) {
         // recupero l'elemento dalla lista dei freezed
-        element e = dinamic_list_pop_last(particles->freezed);
+        // element e = dinamic_list_pop_last(particles->freezed);
         // controllo se ci sono stati errori
-        if(e.error != 0) {
-            continue;
-        }
+        // if(e.error != 0) {
+        //     continue;
+        // }
         // setto il valore della cella a -1
-        setValue(space, ((struct particle *) e.value)->coord, -1);
+        setValue(space, ((struct particle *) particles->freezed->list[i])->coord, -1);
         if(particles->last1 % ((int)(PART_NUM / 10)) == 0)
-            printf("Crystalized: {%d, %d, %d} - %d / %d\n",((struct particle *)e.value)->coord.x, ((struct particle *)e.value)->coord.y, ((struct particle *)e.value)->coord.z, particles->last1, PART_NUM);
-        free(e.value);
+            printf("%d / %d\n", particles->last1, PART_NUM);
+        free(particles->freezed->list[i]);
     }
-    int last = -1;
-    for(int i = 0; i <= particles->last1; i++){
-        if (particles->list1[i] != NULL)
-            particles->list1[++last] = particles->list1[i];
+    #pragma omp single
+    {
+        int last = -1;
+        for(int i = 0; i <= particles->last1; i++){
+            if (particles->list1[i] != NULL)
+                 particles->list1[++last] = particles->list1[i];
+        }
+        particles->last1 = last;
     }
-    particles->last1 = last;
+}
+    dinamic_list_clear(particles->freezed);
+    
+    
 
 }

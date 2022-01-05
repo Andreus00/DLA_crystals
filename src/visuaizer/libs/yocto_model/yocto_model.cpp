@@ -36,6 +36,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <sys/time.h>
 
 #include "ext/perlin-noise/noise1234.h"
 #include "../../../generator/serial/single_core_dla_v2.c"
@@ -81,37 +82,36 @@ void make_grass(scene_data& scene, const instance_data& object,
     // inizializzazione della lista delle particelle da cristallizzare
 
     dinamic_list *freezed = dinamic_list_new();
+    struct particle_lists particles;
+    particles.list1= (struct particle **) malloc(sizeof(struct particle *) * PART_NUM);
+    particles.freezed= freezed;
+    particles.last1= PART_NUM -1;
     
+    struct timeval tval_before, tval_after, tval_result;
+    gettimeofday(&tval_before, NULL);
     if (SERIAL) {
         // inizializzazione delle particelle
-
-        dinamic_list *particle_list = dinamic_list_new();
-        init_particles(particle_list, PART_NUM, &rng, &space);
-        while(particle_list->last >= 0) {
-            single_core_dla(&space, particle_list, freezed, &rng);
+        printf("Serial\n");
+       
+        init_particles(particles.list1, PART_NUM, &space);
+        
+        while(particles.last1 > 0) {
+            single_core_dla(&space, &particles);
+            
         }
     }
     else {
-        struct particle_lists particles;
-        particles.list1= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
-        particles.list2= (struct coords **) malloc(sizeof(struct coords *) * PART_NUM);
-        particles.freezed= freezed;
-        particles.last1= PART_NUM -1;
-        particles.last2= -1;
-        // for (int i = 0; i < 1000; i++)
-        //     printf("aaa");
-        init_particles_parallel(particles.list1, PART_NUM, &rng, &space);
+        printf("Parallel - Threads: %d\n", NUM_THREADS);
+        
+        init_particles_parallel(particles.list1, PART_NUM, &space);
         
         while(particles.last1 >= 0){
-            
-            parallel_dla_openmp(&space, &particles, &rng);
-            particles.last1 = particles.last2;
-            particles.last2 = -1;
-            struct coords **p = particles.list1;
-            particles.list1 = particles.list2;
-            particles.list2 = p;
+            parallel_dla_openmp(&space, &particles);      
         }
     }
+    gettimeofday(&tval_after, NULL);
+    timersub(&tval_after, &tval_before, &tval_result);
+    printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
     
     instance_data instance;
     scene.shapes.push_back(make_box());
