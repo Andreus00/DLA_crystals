@@ -64,7 +64,7 @@ using namespace std::string_literals;
 namespace yocto {
 
 
-void init_parameters(struct coords space_size, struct voxel *space, dinamic_list **freezed, struct particle_lists* particles) {
+void init_parameters(struct coords space_size, struct voxel *space, dinamic_list **freezed, struct particle_lists* particles, int particle_number) {
     init_voxel(space, space_size);
 
     // inizializzazione del cristallo iniziale
@@ -74,15 +74,16 @@ void init_parameters(struct coords space_size, struct voxel *space, dinamic_list
 
     *freezed = dinamic_list_new();
 
-    particles->list1 = (struct particle **) malloc(sizeof(struct particle *) * PART_NUM);
+    particles->list1 = (struct particle **) malloc(sizeof(struct particle *) * particle_number);
     particles->freezed = *freezed;
-    particles->last1 = PART_NUM -1;
+    particles->last1 = particle_number -1;
 }
 
 void make_grass(scene_data& scene, const instance_data& object,
     const vector<instance_data>& grasses, const grass_params& params) {
-     int rng = 69420;
+     int particle_number = params.num;
      int mode = 1;
+     int num_threads = 4;
     
     // inizializzazione del volxel
 
@@ -98,8 +99,8 @@ void make_grass(scene_data& scene, const instance_data& object,
         // inizializzazione delle particelle
         printf("Serial\n");
         gettimeofday(&tval_before, NULL);
-        init_parameters(space_size, &space, &freezed, &particles);
-        init_particles(particles.list1, PART_NUM, &space);
+        init_parameters(space_size, &space, &freezed, &particles, particle_number);
+        init_particles(particles.list1, particle_number, &space);
         
         while(particles.last1 > 0) {
             single_core_dla(&space, &particles);
@@ -107,13 +108,13 @@ void make_grass(scene_data& scene, const instance_data& object,
         }
     }
     else {
-        printf("Parallel OpenMP - Threads: %d\n", NUM_THREADS);
+        printf("Parallel OpenMP - Threads: %d\n", num_threads);
         gettimeofday(&tval_before, NULL);
-        init_parameters(space_size, &space, &freezed, &particles);
-        init_particles_parallel(particles.list1, PART_NUM, &space);
+        init_parameters(space_size, &space, &freezed, &particles, particle_number);
+        init_particles_parallel(particles.list1, particle_number, &space, num_threads);
         
         while(particles.last1 >= 0){
-            parallel_dla_openmp(&space, &particles);      
+            parallel_dla_openmp(&space, &particles, num_threads);      
         }
         
        

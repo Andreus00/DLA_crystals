@@ -1,4 +1,4 @@
-# Install script for directory: /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer
+# Install script for directory: /home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,10 +44,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/cmake_install.cmake")
-  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/cmake_install.cmake")
-  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/cmake_install.cmake")
-  include("/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/cuda/cmake_install.cmake")
+  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/exts/cmake_install.cmake")
+  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/libs/cmake_install.cmake")
+  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/cmake_install.cmake")
+  include("/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/cuda/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

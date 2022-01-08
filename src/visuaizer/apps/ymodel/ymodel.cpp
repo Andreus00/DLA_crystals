@@ -68,6 +68,7 @@ void run(const vector<string>& args) {
   auto tree               = false;
   auto trparams           = tree_params{};
   auto woods              = 0;
+  auto part_num           = 1000;
 
   // parse command line
   auto error = string{};
@@ -127,6 +128,8 @@ void run(const vector<string>& args) {
   add_option(cli, "show_crown_points", trparams.show_crown_points,
       "Show the attraction points");
   add_option(cli, "woods", woods, "make woods");
+  // part_num
+  add_option(cli, "part_num", part_num, "particle number");
   if (!parse_cli(cli, args, error)) print_fatal(error);
 
   // load scene
@@ -145,6 +148,7 @@ void run(const vector<string>& args) {
       if (scene.instance_names[idx].find(grass) != string::npos)
         grasses.push_back(scene.instances[idx]);
     }
+    gparams.num = part_num;
     make_grass(scene, get_instance(scene, grassbase), grasses, gparams);
   }
   // make a directory if needed

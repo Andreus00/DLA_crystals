@@ -130,54 +130,6 @@
       "material": 1
     },
     {
-      "name": "grass1",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0],
-      "shape": 1,
-      "material": 2
-    },
-    {
-      "name": "grass2",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, 0, 0],
-      "shape": 2,
-      "material": 2
-    },
-    {
-      "name": "grass3",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06, 0, 0],
-      "shape": 3,
-      "material": 2
-    },
-    {
-      "name": "grass4",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, 0],
-      "shape": 4,
-      "material": 2
-    },
-    {
-      "name": "grass5",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0, 0],
-      "shape": 5,
-      "material": 2
-    },
-    {
-      "name": "grass6",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0, 0, 0],
-      "shape": 6,
-      "material": 2
-    },
-    {
-      "name": "grass7",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0, 0],
-      "shape": 7,
-      "material": 2
-    },
-    {
-      "name": "grass8",
-      "frame": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, 0, 0],
-      "shape": 8,
-      "material": 2
-    },
-    {
       "name": "arealight1",
       "frame": [
         0.8944271802902222, -0.0, 0.4472135901451111, 0.27562475204467773,

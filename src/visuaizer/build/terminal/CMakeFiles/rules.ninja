@@ -147,7 +147,7 @@ rule CXX_EXECUTABLE_LINKER__yscene_RelWithDebInfo
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
+  command = /opt/cmake-3.21.3-linux-x86_64/bin/cmake --regenerate-during-build -S/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer -B/home/andrea/Scrivania/SSD_256_W/Users/Andrea/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal
   description = Re-running CMake...
   generator = 1
 
