@@ -7,15 +7,15 @@
     #include "../../../utils/dinamic_list.h"
 #endif
 
-#define PART_NUM 1000000
+#define PART_NUM 100000
 
 struct particle *get_random_position(struct coords voxel_size, int seed) {
     struct particle *ret = (struct particle *) malloc(sizeof(struct particle));
     ret->rng = seed;
-    ret->coord.x = (int) (atomic_random_float(&ret->rng) * voxel_size.x);
-    ret->coord.y = (int) (atomic_random_float(&ret->rng) * voxel_size.y);
-    ret->coord.z = (int) (atomic_random_float(&ret->rng) * voxel_size.z);
-    switch((int) atomic_random_float(&ret->rng) * 6) {
+    ret->coord.x = (int) ((atomic_random_float(&ret->rng) * voxel_size.x));
+    ret->coord.y = (int) ((atomic_random_float(&ret->rng) * voxel_size.y));
+    ret->coord.z = (int) ((atomic_random_float(&ret->rng) * voxel_size.z));
+    switch((int) ((atomic_random_float(&ret->rng) * 6))) {
         case 0:
             ret->coord.x = 0;
             break;

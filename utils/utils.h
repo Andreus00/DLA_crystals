@@ -3,6 +3,7 @@
 #ifndef DINAMIC_LISTS
     #include "dinamic_list.h"
 #endif
+
 #define UTILS
 
 #define CHUNK_SIZE 16

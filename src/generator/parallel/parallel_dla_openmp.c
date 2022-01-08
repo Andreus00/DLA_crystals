@@ -6,16 +6,17 @@
     #include "../../../utils/dinamic_list.h"
 #endif
 #include <omp.h>
-#define PART_NUM 10000000
-#define NUM_THREADS 8
+#define PART_NUM 200000
+#define NUM_THREADS 3
 
 struct particle *get_random_position_atomic(struct coords voxel_size, int seed) {
     struct particle *ret = (struct particle *) malloc(sizeof(struct particle));
+    //printf()
     ret->rng = seed;
     ret->coord.x = (int) (atomic_random_float(&ret->rng) * voxel_size.x);
     ret->coord.y = (int) (atomic_random_float(&ret->rng) * voxel_size.y);
     ret->coord.z = (int) (atomic_random_float(&ret->rng) * voxel_size.z);
-    switch((int) atomic_random_float(&ret->rng) * 6) {
+    switch((int) ((atomic_random_float(&ret->rng) * 6))) {
         case 0:
             ret->coord.x = 0;
             break;
@@ -72,7 +73,7 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) 
     // atomic_random_float(rng);
     #pragma omp parallel
 {
-    #pragma omp for schedule(dynamic, 1000)// firstprivate(rng_)
+    #pragma omp for schedule(dynamic, 100)
         for (int i = 0; i <= particles->last1; i++) {
             // valore presente in una cella del voxel
             int cell_value;
@@ -122,8 +123,8 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) 
         // }
         // setto il valore della cella a -1
         setValue(space, ((struct particle *) particles->freezed->list[i])->coord, -1);
-        if(particles->last1 % ((int)(PART_NUM / 10)) == 0)
-            printf("%d / %d\n", particles->last1, PART_NUM);
+        // if(particles->last1 % ((int)(PART_NUM / 10)) == 0)
+        //     printf("%d / %d\n", particles->last1, PART_NUM);
         free(particles->freezed->list[i]);
     }
     #pragma omp single
@@ -137,7 +138,4 @@ void parallel_dla_openmp(struct voxel *space, struct particle_lists *particles) 
     }
 }
     dinamic_list_clear(particles->freezed);
-    
-    
-
 }
