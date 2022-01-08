@@ -108,15 +108,6 @@ struct coords getSize(struct voxel* v) {
 // pseudo random function
 float random_float(int* rng) {
     int n  = (*rng << 13U) ^ *rng;
-    (*rng)++;
-    n = n * (n * n * 15731U + 789221U) + 1376312589U;
-    return (float)((n & 0x7fffffffU)/((float)(0x7fffffff)));
-}
-
-////////////////////////
-// pseudo random function
-float atomic_random_float(int* rng) {
-    int n  = (*rng << 13U) ^ *rng;
     (*rng) *= 6364136223846793005ULL;
     n = n * (n * n * 15731U + 789221U) + 1376312589U;
 

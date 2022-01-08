@@ -61,5 +61,4 @@ struct coords getSize(struct voxel* v);
 
 float random_float(int *rng);
 
-float atomic_random_float(int *rng);
 

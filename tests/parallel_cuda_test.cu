@@ -1,31 +1,41 @@
 #include "../src/generator/parallel/parallel_dla_cuda.cu"
 #include <sys/time.h>
-#define CHUNK_SIZE 16
 
 int main(int argc, char const *argv[])
 {
+    if (argc != 7){
+        fprintf(stderr, "Usage: ./paralle_test_cuda part_num voxel_size GridDim BlockDim [print time? 0 - 1] [print crystal? 0 - 1]\n");
+        exit(1);
+    }
     // inizializzazione del volxel
-    int pn_0 = 90000;
+    int pn_0 = atoi(argv[1]);
+    int const W = atoi(argv[2]);
+    unsigned int grid_w = atoi(argv[3]);
+    unsigned int block_w = atoi(argv[4]);
     int particle_number_h = pn_0;
-    int const W = 8;
     struct coords space_size = {W, W, W};
     struct coords voxel_size = {space_size.x * CHUNK_SIZE, space_size.y * CHUNK_SIZE, space_size.z * CHUNK_SIZE};
     struct timeval tval_before, tval_after, tval_result;
     gettimeofday(&tval_before, NULL);
-    int *space = parallel_dla_cuda(space_size, 16, particle_number_h);
+    int *space = parallel_dla_cuda(space_size, 16, particle_number_h, grid_w, block_w);
     gettimeofday(&tval_after, NULL);
     timersub(&tval_after, &tval_before, &tval_result);
-    printf("Time elapsed: %ld.%06ld num: %d\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec, particle_number_h);
-    // for(int i = 0; i < voxel_size.x; i++) {    // Ho W * W * W chunk
-    //     for(int j = 0; j < voxel_size.y; j++) {
-    //         for(int k = 0; k < voxel_size.z; k++) {
-    //             int value = space[voxel_size.x * voxel_size.y * k + voxel_size.x * j + i];
-    //             printf("x: %d - y: %d - z: %d - val: %d\n", i , j, k, value);
-    //         }
-    //     }
-    // }
+    if (atoi(argv[5])){
+       printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+    }
+    if (atoi(argv[6])){
+        for(int i = 0; i < voxel_size.x; i++) {
+            for(int j = 0; j < voxel_size.y; j++) {
+                for(int k = 0; k < voxel_size.z; k++) {
+                    int value = space[voxel_size.x * voxel_size.y * k + voxel_size.x * j + i];
+                    printf("x: %d - y: %d - z: %d - val: %d\n", i , j, k, value);
+               }
+            }
+        }
+    }
+    
+    // test del kernel pippo_franco<<<>>>()
 
-    //printf("Finito");
     // dim3 GridDim = {8, 8, 8};
     // dim3 BlockDim = {4, 4, 4};
     

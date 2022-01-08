@@ -9,6 +9,8 @@
     #include "../../../utils/utils.c"
 #endif
 
+#define MIN_BLOCK 4
+
 ////////////////////////
 // pseudo random function
 __device__ float random_float_cuda(int* rng) {
@@ -17,7 +19,10 @@ __device__ float random_float_cuda(int* rng) {
     n = n * (n * n * 15731U + 789221U) + 1376312589U;
     return (float)((n & 0x7fffffffU)/((float)(0x7fffffff)));
 }
-
+/*
+Prende un seed per il generatore random e la grandezza del voxel, scrive in una struttura particle 
+la posizione della particella e l'rng. La particella viene posizionata in una delle facce del voxel.
+*/
 __device__ void get_random_position_cuda(struct coords voxel_size, int seed, struct particle *p) {
     p->rng = seed;
     p->coord.x = (int) (random_float_cuda(&p->rng) * voxel_size.x);
@@ -43,6 +48,7 @@ __device__ void get_random_position_cuda(struct coords voxel_size, int seed, str
             p->coord.z = voxel_size.z - 1;
             break;
     }
+     // tentativo di eliminare lo switch scartato perché dava risultati diversi
 
     /*    int data[] = {
         0, 1, 1,
@@ -66,7 +72,11 @@ __device__ void get_random_position_cuda(struct coords voxel_size, int seed, str
 
 
 }
-
+/*
+Date le coordinate di una particella, un puntatore a un rng e la grandezza del voxel, mette nella coord out
+le coordinate verso le quali si muoverà la particella.
+Ci sono 27 possibili direzioni per la particella.
+*/
 __device__ void move_particle_cuda(struct coords c1, struct coords *out, int* rng, struct coords voxel_size){
     out->x = c1.x;
     out->y = c1.y;
@@ -82,179 +92,238 @@ __device__ void move_particle_cuda(struct coords c1, struct coords *out, int* rn
         out->z += rz;
     return;
 }
-
+/*
+restituisce il thread ID
+*/
 __device__ int get_tid(){
     return ( gridDim.x * gridDim.y * blockIdx.z + gridDim.x * blockIdx.y + blockIdx.x) * blockDim.x * blockDim.y * blockDim.z \
      + blockDim.x * blockDim.y * threadIdx.z + blockDim.x * threadIdx.y + threadIdx.x;
 }
+/*
+restituisce il numero di threads
+*/
 __device__ int get_num_threads(){
     return gridDim.x * gridDim.y * gridDim.z * blockDim.x * blockDim.y * blockDim.z;
 }
-
+/*
+ muove le particelle di un passo.
+*/
 __global__ void step(int* voxel_d, struct coords voxel_size, struct particle** list_d, struct particle** freezed_d, int particle_number) {
     int tid = get_tid();
     int num_threads = get_num_threads();
-
+    // ogni thread va a calcolare il movimento di alcune delle particelle.
+    // thread contigui vanno a prendere particelle contigue
+    // es: se ho tre thread e 10 particelle:
+    // threads:     0  1  2 | 0  1  2 | 0  1  2 | 0
+    // particelle:  0  1  2 | 3  4  5 | 6  7  8 | 9
     for(int i = tid; i < particle_number ; i += num_threads)  {
         struct particle *part = list_d[i];
-        // get value
+        // prende il valore della cella 
         int cell_value = voxel_d[part->coord.x + part->coord.y * voxel_size.x + part->coord.z * voxel_size.x * voxel_size.y];
-        if (cell_value != -1){
+        
+        if (cell_value != -1){  // la particella è in movimento
             struct coords new_pos;
+            //prova a muovere la particella
             move_particle_cuda(part->coord, &new_pos, &part->rng, voxel_size);
             cell_value = voxel_d[new_pos.x + new_pos.y * voxel_size.x + new_pos.z * voxel_size.x * voxel_size.y];
 
-            // passare il puntatore alla particella da list_d a freezed se (cell_value == -1)
-            // altrimenti, fare che list_d = new_position
-            
-            if((cell_value != -1)){
+            if((cell_value != -1)){ // la particella si è mossa in uno spazio vuoto
+                // aggiorna la posizione
                 part->coord = new_pos;
             }
-            else {
+            else { // la particella ha incontrato un cristallo
+                // mette la particella nella lista di particelle da cristallizzare
+                // e la rimuove dalla lista delle particelle che si stanno muovendo
                 freezed_d[i] = part;
                 list_d[i] = NULL;
             }
         }
-        else{
-                free(list_d[i]);        // free sul device è supportato da CC 2.0+
+        else{// la cella è già stata cristallizzata
                 list_d[i] = NULL;
             }
     }
     return;
 }
 
-__global__ void init_particles_cuda(struct particle **list_d, int num, struct coords voxel_size ) {
+/*
+ inizializza la lista delle particelle
+*/
+__global__ void init_particles_cuda(struct particle **list_d, int num, struct coords voxel_size , struct particle* particle_list) {
     // recupera il suo id
      int tid =   get_tid();
      int num_threads = get_num_threads();
+    // i thread prendono alcune particelle e le inzializzano
+    // Thread vicini prendono particelle vicine (guarda esempio di step())
     for(int i = tid; i < num; i += num_threads)  {
-        list_d[i] = (particle *) malloc(sizeof(struct particle));       // malloc sul device è supportato da CC 2.0+
+        list_d[i] = &particle_list[i];
         //      genera la particella a index i
         get_random_position_cuda(voxel_size, i + 1,list_d[i]);
     }
     
 }
+/*
+ cristallizza le particelle
+*/
 __global__ void freeze(int* voxel_d, struct coords voxel_size, struct particle** list_d, struct particle** freezed_d, int particle_number_d){
-    // freezare particelle
-   // __shared__ int deleted_particles_d;
+    
     int tid =   get_tid();
     int num_threads = get_num_threads();
+    // i thread prendono alcune particelle e le inzializzano
+    // Thread vicini prendono particelle vicine (guarda esempio di step())
     for(int i = tid; i < particle_number_d; i += num_threads)  {
-       if( freezed_d[i] != NULL ){
+       if( freezed_d[i] != NULL ){// se la particella va cristallizzata
+           //cristallizza e toglie il puntatore dalla lista delle particelle da cristallizzare
            voxel_d[freezed_d[i]->coord.x + freezed_d[i]->coord.y * voxel_size.x + freezed_d[i]->coord.z * voxel_size.x * voxel_size.y] = -1;
-           free(freezed_d[i]);          // free sul device è supportato da CC 2.0+
-           //deleted_particles_d++;
+           
            freezed_d[i]=NULL;
        }
     }  
 }
+/*
+Pippo_franco è la funzione utilizzata per far scorrere gli elementi di una lista verso sinisntra
+in modo da non avere più buchi.
+È considerabile come il passo "combina" di un algoritmo "divide et impera" bottom up.
+Ciò che fa è, dato il livello a cui l'algoritmo deve combinare, calcola la grandezza 
+dei sottoarray che devono essere rielaborati.
+La particle list è la lista di puntatori a particelle su cui la funzione deve lavorare.
+particle_number_d è il numero di particelle in particle_list_d.
+v_array_d è un array che mantiene il numero di elementi che si trovano all'interno di un sottoarray.
 
+leggenda: # -> elemento della lista piena
+          - -> elemento della lista vuoto
+array iniziale:                 # # - # - - # - # - - # - - - # # # - - # - # -
+
+combina due array di 1 elementos
+        level 0 out:                ## #- -- #- #- #- -- #- ## -- #- #-
+
+combina due array di 2 elementi
+        level 1 out:                   ###- #--- ##-- #--- ##-- ##--
+
+combina due array di 4 elementi
+level 2 out:                            ####---- ###----- ####----
+
+combina due array di 8 elementi
+level 3 out:                             #######--------- ####----
+
+combina due array di 16 elementi
+level 4 out:                              ###########-------------
+
+i thread si dividono le celle durante il lavoro.
+Se una cella si trova in un sottoarray multiplo di 2 ed è vuoto lavora, altrimenti no.
+
+quando una casella è vuota e si trova in un sottoarray multiplo di 2 va a prendre un elemento pieno
+dal sottoarray successivo (che di sicuro non lavora).
+
+esempio con sottoarray di numghezza 16
+threads 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15  
+        #  #  #  #  -  -  -  -  -  -  -  -  -  -  -  - | #  #  #  #  #  #  #  #  -  -  -  -  -  -  -  -
+                    v1                                   m                       v2
+    in questo caso i thread da 0 a 3 non fanno niente. 
+    I thread da 4 a 15 invece fanno un calcolo usando v1, v2 e m 
+    per trovare la casella da cui spostare la particella
+
+    v1 e v2 vengono recuperati da v_array_d.
+    alla fine, v1 + v2 viene scritto in v_array_d in corrispondenza 
+    dell'indice della prima particella del sottoarray di sinistra (durante i livelli
+    pari viene messo ad offset 0 mentre durante i livelli dispari ad offset 1 in modo da 
+    non sovrascriverli perchè alcuni dei thread potrebbero non aver finito di operare
+    quando v1 + v2 viene scritto).
+*/
 __global__ void pippo_franco(struct particle** particle_list_d, int particle_number_d, int* v_array_d, int level) {
     int tid =   get_tid();
     
     int num_threads = get_num_threads();
+    // caso base con un' unica particella che è stata eliminata
     if(particle_number_d == 1 && particle_list_d[0] == NULL) {
         v_array_d[0] = 0;
     }
-    if(level == 0) {    // inizializzo la lizta dei v
-        // for(int jj = 0; jj < 100000; jj++) printf("l: %d  - i: %d\n",level, tid);
+    // primo passo di ridimensionamento 
+    if(level == 0) {  
+        // inizializza la lista v_array_d
         for(int i = tid * 2; i < (particle_number_d); i += (num_threads * 2)) {
-            v_array_d[i] = (int) (particle_list_d[i] != NULL); // inizializzo a coppie e swappo.
+            // controlla se la cella è vuota
+            v_array_d[i] = (int) (particle_list_d[i] != NULL); 
+            //controlla di non andare fuori dall'array
             if((i + 1) < particle_number_d) {
-                //v_array_d[i + 1] = (int) (particle_list_d[i + 1] != NULL);
+                // contiene il numero di celle piene per la coppia (i, i + 1)
                 v_array_d[i] += (int) (particle_list_d[i + 1] != NULL);
+                // se la cella i è vuota e quella i + 1 è piena fa uno swap
                 if(particle_list_d[i] == NULL && v_array_d[i] == 1) {
-                    // printf("Swap cella: %d\n", i);
+                    // swap
                     particle_list_d[i] = particle_list_d[i + 1];
                     particle_list_d[i + 1] = NULL;
                 }
-                // if(v_array_d[i] == 1 && v_array_d[i + 1] == 1) {
-                //     particle_list_d[i] = particle_list_d[i + 1];
-                //     particle_list_d[i + 1] = NULL;
-                //     v_array_d[i + 1] = 0;
-                //     // v_array_d[i] = 1;
-                // }
+               
             }
-            // if (tid==0)
-            //printf("l: %d  - i: %d - i/blk: %d - v1: %d - v2: %d\n",level, i, i/2,v_array_d[i],v_array_d[i + 1]);
+            
         }
-        // if (tid==0){
-        // for (int i = 0;  i< 10; i++) {
-        //     printf("%d - %p\n", i, particle_list_d[i]);
-        // }
-        // }
+        
     }
-    
+    // passi di ridimensionamento successivi
     else {
-        // for (int j=tid; j<particle_number_h; j+=num_threads)
-        //     printf("\n");
+        // calcola lunghezza di blocco da ridimensionare
         int block_len = (1 << level);
         for(int i = tid; i < (particle_number_d); i += num_threads) {
-            // devo trovare l'indice iniziale del blocco in cui si trova l'elemento, 
-            // e andare a vedere nell'array dei v, il valore che si trova in quel punto
-            //for(int jj = 0; jj < 2; jj++) printf("l: %d  - i: %d - i/bl_len: %d\n",level, i, block_len);
+           // controlla se il thread deve lavorare
             if(((int)(i / block_len)) % 2 == 0) {
-                int m = block_len * ((int) (i / block_len) + 1);  // La metà equivale al primo indice del blocco dispari
-                //if (level == 13) for(int jj = 0; jj < 10000; jj++) printf("l: %d  - i: %d - m: %d\n",level, i, m);
+                // trova il punto che divide 2 blocchi adiacenti di lunghezza block_len della lista da ordinare
+                int m = block_len * ((int) (i / block_len) + 1);  
+                // controlla di non andare fuori dall'array
                 if(m < particle_number_d) {
+                    // calcola il numero di particelle contenute in ciascuno dei 2 blocchi
                     int casella = m - block_len + ((int)(level % 2 == 0));
                     int v1 = v_array_d[casella];
                     int v2 = v_array_d[m + ((int)(level % 2 == 0))];
-                    //printf("l: %d  - i: %d - v1: %d - v2: %d  - casella: %d  - m: %d\n",level, i, v1, v2, casella, m);
+                    // se la cella controllata è vuota esegue uno swap con l'ultima cella piena del secondo blocco
                     if(particle_list_d[i] == NULL) {
+                        // swap
                         int xx = m + v2 + (m - block_len) + v1 - i - 1;
-                        //printf("swap: %d  ->  %d\n", i, xx);
+                        
                         particle_list_d[i] = particle_list_d[xx];
                         particle_list_d[xx] = NULL;
-                        // if(xx > 10000 && level <= 10) printf("%d - lvl: %d\n", xx, level);
                         
                     }
+                    // un thread per blocco aggiorna il numero di particelle presenti nel nuovo blocco formato dall' unione dei 2 
                     if(i % block_len == 0) {
                         v_array_d[m - block_len + ((int)(level % 2 == 1))] = v1 + v2;
                     }
-                    // if (i == 9983) {
-                    //     printf("l: %d  - i: %d - i/blk: %d - v1: %d - v2: %d\n",level, i, i/block_len, v1, v2);
-                    // }
+                    
                 }
+                // se il blocco non può essere unito con un altro aggiorna comunque il numero delle particelle in esso contenute
                 else {
                     int xx = m - block_len + ((int)(level % 2 == 0));
                     int v1 = v_array_d[xx];
                     v_array_d[m - block_len + ((int)(level % 2 == 1))] = v1;
-                    // printf("l: %d  - i: %d - v1: %d - casella: %d  - m: %d  - block_len: %d\n",level, i, v1, xx, m, block_len);
+                    
                 }
-                // if (i == 9983) {
-                //         printf("l: %d  - i: %d - i/blk: %d - m: %d  - particle_number: %d  - v1: %d - v2: %d\n",level, i, i/block_len, m,\
-                //          particle_number_d, v_array_d[m - block_len + level % 2 == 0], v_array_d[m + level % 2 == 0]);
-                //     }
+                
             }
             
         }
-        if (tid==0){
-        for (int i = 0;  i< 10; i++) {
-            // printf("%d - %p\n", i, particle_list_d[i]);
-        }
-        }
+      
     }
 }
-
+// esegue una print dell' array di particelle
 __global__ void print_the_fucking_array(struct particle** particle_list_d, int max) {
     if(get_tid() == 0)
         for(int i = 0; i < max; i++) 
             printf(" %d  -  %p\n", i, particle_list_d[i]);        
 }
 
-
-int *parallel_dla_cuda(struct coords space_size, int chunk_size, int particle_number_h) {
+// esegue la simulazione di generazione cristallina e ritorna lo spazio con il cristallo generato sotto forma di lista di interi
+int *parallel_dla_cuda(struct coords space_size, int chunk_size, int particle_number_h, unsigned int grid_w, unsigned int block_w) {
     // alloco lo spazio per il voxel
     struct coords voxel_size = {space_size.x * chunk_size, space_size.y * chunk_size, space_size.z * chunk_size};
     size_t space_number = voxel_size.x * voxel_size.y * voxel_size.z;
 
     int *space_h = (int *) calloc(space_number, sizeof(int));
-    
+    // piazza il primo cristallo
     space_h[voxel_size.x / 2 + (voxel_size.y / 2) * voxel_size.x + (voxel_size.z / 2) * voxel_size.x * voxel_size.y] = -1 ;
-
-    int *voxel_d;
+    // alloca la memoria in  cuda e copia i dati che serviranno ai vari kernel
     cudaError_t  err;
+    // alloca lo spazio di simulazione
+    int *voxel_d;
+    
     err = cudaMalloc((void **) &voxel_d, space_number * sizeof(int));
     if(err < 0) {
         fprintf(stderr, "Malloc Failed");
@@ -272,15 +341,19 @@ int *parallel_dla_cuda(struct coords space_size, int chunk_size, int particle_nu
     struct particle **particles_d;
     err = cudaMalloc(&particles_d, sizeof(struct particle *) * particle_number_h);
 
+    struct particle *particle_list_d;
+    err = cudaMalloc(&particle_list_d, sizeof(struct particle) * particle_number_h);
+
     if(err < 0) {
         fprintf(stderr, "Malloc Failed");
         exit(1);
     }
-
-    dim3 GridDim = {16, 16, 16};
-    dim3 BlockDim = {8, 8, 8};
-    init_particles_cuda<<<GridDim, BlockDim>>>(particles_d, particle_number_h, voxel_size);
-    
+    // imposta la grandezza della griglia e dei blocchi
+    dim3 GridDim = {grid_w, grid_w, grid_w};
+    dim3 BlockDim = {block_w, block_w, block_w};
+    // inizializza le particelle
+    init_particles_cuda<<<GridDim, BlockDim>>>(particles_d, particle_number_h, voxel_size, particle_list_d);
+    // alloca la lista di particelle da cristallizzare
     struct particle **freezed_d;
     err = cudaMalloc(&freezed_d, sizeof(struct particle *) * particle_number_h);
 
@@ -298,59 +371,40 @@ int *parallel_dla_cuda(struct coords space_size, int chunk_size, int particle_nu
         exit(1);
     }
     
-    // int *freezed_number_d;
-    // err = cudaMalloc((void **) &freezed_number_d, sizeof(int));
-
-    // err = cudaMemcpy(freezed_number_d, &particle_number_h, sizeof(int), cudaMemcpyHostToDevice);
-
+    // esegue la simulazione finché non si sono cristallizzate tutte le particelle
     while(particle_number_h > 0) {
+        // muove le particelle
         step<<<GridDim, BlockDim>>>(voxel_d, voxel_size, particles_d, freezed_d, particle_number_h);
         cudaDeviceSynchronize();
+        // cristallizza le particelle
         freeze<<<GridDim, BlockDim>>>(voxel_d, voxel_size, particles_d, freezed_d, particle_number_h);
         cudaDeviceSynchronize();
+        // ridimensiona la lista di particelle eliminando quelle cristallizzate
         int logarithm =  (int) ceil(log2(particle_number_h)) - 1 + ((int)particle_number_h == 1);
         for(int level = 0; level <= logarithm; level++) {
             pippo_franco<<<GridDim, BlockDim>>>(particles_d, particle_number_h, v_array_d, level);
         }
+        // copia il numero delle particelle rimaste dal device.
         cudaMemcpy(&particle_number_h, v_array_d + ((int)(logarithm % 2 == 1)), sizeof(int), cudaMemcpyDeviceToHost);
-
-         if(particle_number_h % 1000 == 1) printf("Particle_number: %d\n", particle_number_h);
+        // print per sapere il numero di particelle rimaste
+        /* if(particle_number_h % 1000 == 1) printf("Particle_number: %d\n", particle_number_h);*/
+        // ridimensiono il numero di threads
+        if (GridDim.x != MIN_BLOCK && (GridDim.x * GridDim.x * GridDim.x * block_w *block_w * block_w) > particle_number_h) {
+            GridDim.x = max(MIN_BLOCK,(int) (ceil(GridDim.x / 2)));
+            GridDim.y = max(MIN_BLOCK,(int) (ceil(GridDim.y / 2)));
+            GridDim.z = max(MIN_BLOCK,(int) (ceil(GridDim.z / 2)));
+        }
     }
     
     cudaMemcpy(space_h,  voxel_d, space_number *sizeof(int), cudaMemcpyDeviceToHost);
-
+    // libera la memoria della gpu
     cudaFree(freezed_d);
     cudaFree(voxel_d);
     cudaFree(v_array_d);
     cudaFree(particles_d);
+    cudaFree(particle_list_d);
     
-
     return space_h;
 }
 
 
-// int main(int argc, char* argv[]) {
-//     printf("Child start\n");
-//     printf("%s",argv[0]);
-//     close((long) argv[1]);
-//     close((long) argv[2]);
-//     int fd = (int)((long) *(argv[0]));  // file to read
-//     int fd2 = (int)((long) *(argv[3]));
-//     struct coords space_size;
-//     read(fd, &space_size, sizeof(struct coords));
-//     int chunk_size;
-//     read(fd, &chunk_size, sizeof(int));
-//     int particle_number_h;
-//     read(fd, &particle_number_h, sizeof(int));
-//     printf("{%d, %d, %d}, %d, %d", space_size.x, space_size.y, space_size.z, chunk_size, particle_number_h);
-
-//     int *space = parallel_dla_cuda(space_size, chunk_size, particle_number_h);
-
-//     struct coords voxel_size = {space_size.x * chunk_size, space_size.y * chunk_size, space_size.z * chunk_size};
-//     int space_number = voxel_size.x * voxel_size.y * voxel_size.z;
-//     write(fd2,space, sizeof(int) * space_number);
-
-    
-//     // scrive space all'interno del file
-    
-// }

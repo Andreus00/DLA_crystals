@@ -1,7 +1,7 @@
 /*
-Mia implementazione delle liste dinamiche. Esse si comportano come arraylist di java.
+Mia implementazione delle liste dinamiche. Esse si comportano come arraylist di python.
 Usano dei puntatori void * per mantenere il riferimento all'oggetto da mettere nella lista.
-Ogni volta che si aggiunge un elemento e no nc'è abbastanza spazio, la lista si espande.
+Ogni volta che si aggiunge un elemento e non c'è abbastanza spazio, la lista si espande.
 Ogni volta che invece si rimuove un elemento e c'è troppa memoria inutilizzata, la lista si riduce.
 */
 
