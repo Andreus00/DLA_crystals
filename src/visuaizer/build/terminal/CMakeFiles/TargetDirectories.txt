@@ -26,3 +26,5 @@
 /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene/CMakeFiles/rebuild_cache.dir
 /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene/CMakeFiles/edit_cache.dir
 /home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/apps/yscene/CMakeFiles/yscene.dir
+/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/cuda/CMakeFiles/rebuild_cache.dir
+/home/andrea/Scrivania/Workspaces/c-c++/DLA_crystals/src/visuaizer/build/terminal/cuda/CMakeFiles/edit_cache.dir

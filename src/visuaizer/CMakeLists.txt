@@ -23,6 +23,24 @@ if(GENERATOR_IS_MULTI_CONFIG)
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR})
 endif(GENERATOR_IS_MULTI_CONFIG)
 
+#####################
+SET(CUDA_LIBRARIES libs/cuda CACHE PATH "s")
+find_package(CUDA QUIET)
+if(CUDA_FOUND)
+    include_directories(${CUDA_INCLUDE_DIRS})
+    SET(ALL_CUDA_LIBS ${CUDA_LIBRARIES} ${CUDA_cusparse_LIBRARY} ${CUDA_cublas_LIBRARY})
+    SET(LIBS ${LIBS} ${ALL_CUDA_LIBS})
+    message(STATUS "CUDA_LIBRARIES: ${CUDA_INCLUDE_DIRS} ${ALL_CUDA_LIBS}")
+    set(CUDA_PROPAGATE_HOST_FLAGS ON)
+    set(CUDA_SEPARABLE_COMPILATION OFF)
+    list( APPEND CUDA_NVCC_FLAGS -gencode=arch=compute_30,code=compute_30 )
+    list( APPEND CUDA_NVCC_FLAGS -gencode=arch=compute_52,code=sm_52 )
+endif()
+
+####################
+
 add_subdirectory(exts)
 add_subdirectory(libs)
 add_subdirectory(apps)
+###################
+add_subdirectory(cuda)

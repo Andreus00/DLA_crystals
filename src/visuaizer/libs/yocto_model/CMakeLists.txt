@@ -1,8 +1,19 @@
+#project(cmake_and_cuda LANGUAGES CXX CUDA)
+
+
 add_library(yocto_model 
   yocto_model.h 
   yocto_model.cpp
   ext/perlin-noise/noise1234.cpp)
+  #../cuda/parallel_dla_cuda.cu)
+######################
+#set_property(TARGET yocto_model PROPERTY CUDA_ARCHITECTURES ON)
 
+# set_property(TARGET ../cuda/parallel_dla_cuda.cu
+#              PROPERTY CUDA_SEPARABLE_COMPILATION ON)
+
+
+######################
 target_include_directories(yocto_model PRIVATE .)
 target_include_directories(yocto_model PRIVATE ./ext)
 target_include_directories(yocto_model PUBLIC ${CMAKE_SOURCE_DIR}/libs)
